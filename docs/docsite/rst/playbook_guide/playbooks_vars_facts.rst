@@ -20,7 +20,7 @@ Ansible facts are data related to your remote systems, including operating syste
       ansible.builtin.debug:
         var: ansible_facts
 
-To see the 'raw' information as gathered, run this command at the command line:
+If you have already created an :ref:`inventory<get_started_inventory>` and configured working SSH credentials, you can see the 'raw' information for any host in your inventory by running this :ref:`ad-hoc ansible command<intro_adhoc>` at the command line:
 
 .. code-block:: shell
 
@@ -498,6 +498,8 @@ To reference the system hostname:
 .. code-block:: jinja
 
     {{ ansible_facts['nodename'] }}
+
+Note that `ansible_` prefix shown in the setup module output is not used when addressing these variables. 
 
 You can use facts in conditionals (see :ref:`playbooks_conditionals`) and also in templates. You can also use facts to create dynamic groups of hosts that match particular criteria, see the :ref:`group_by module <group_by_module>` documentation for details.
 

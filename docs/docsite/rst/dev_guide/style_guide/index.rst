@@ -148,8 +148,11 @@ The Ansible documentation allows the following values:
 * bash
 * console
 * csharp
+* diff
 * ini
+* jinja
 * json
+* md
 * powershell
 * python
 * rst
@@ -159,6 +162,9 @@ The Ansible documentation allows the following values:
 * text
 * yaml
 * yaml+jinja
+
+..
+  The above list is enforced by tests/checkers/rst-yamllint.py.
 
 For example, you can highlight Python code using following syntax:
 
@@ -174,7 +180,7 @@ For example, you can highlight Python code using following syntax:
 Internal navigation
 -------------------
 
-`Anchors (also called labels) and links <https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#ref-role>`_
+`Anchors (also called labels) and links <https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-ref>`_
 work together to help users find related content.
 Local tables of contents also help users navigate quickly to the information they need.
 All internal links should use the ``:ref:`` syntax.
@@ -310,7 +316,7 @@ We follow these technical or mechanical guidelines on all .md pages:
 Heading notation
 ----------------
 
-`Section headings in markdown <https://daringfireball.net/projects/markdown/syntax#headers>`_
+`Section headings in markdown <https://daringfireball.net/projects/markdown/syntax#header>`_
 can use a variety of notations.
 To make our documents easy to read and to edit, we follow a standard set of heading notations.
 We use:

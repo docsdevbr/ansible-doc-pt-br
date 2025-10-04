@@ -1,4 +1,3 @@
-.. _roadmaps:
 .. _ansible_roadmaps:
 
 Ansible Roadmap
@@ -21,6 +20,8 @@ Visit the :ref:`Ansible communication guide<communication>` for details on how t
    :glob:
    :caption: Ansible Release Roadmaps
    
+   COLLECTIONS_13
+   COLLECTIONS_12
    COLLECTIONS_11
    COLLECTIONS_10
    COLLECTIONS_9

@@ -50,8 +50,6 @@ The Steering Committee itself is also a group in the forum (`@SteeringCommittee 
   +------------------+---------------+--------------+-------------+
   | Core Team repr.  | See Forum     |              | 2024        |
   +------------------+---------------+--------------+-------------+
-  | Dylan Silva      | thaumos       | thaumos      | 2021        |
-  +------------------+---------------+--------------+-------------+
   | Felix Fontein    | felixfontein  | felixfontein | 2021        |
   +------------------+---------------+--------------+-------------+
   | James Cassell    | jamescassell  | cassel       | 2021        |
@@ -103,7 +101,7 @@ Depending on a topic you want to discuss with the Community and the Committee, a
 * `Ansible Collection Inclusion Checklist <https://github.com/ansible-collections/ansible-inclusion/blob/main/collection_checklist.md>`_.
 * :ref:`removal_from_ansible`.
 
-.. _community_topics_workflow:
+.. _community_topics_sc:
 
 Community topics workflow
 ^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -37,7 +37,7 @@ Find the task that best describes what you want to do:
       * a :ref:`network module <developing_modules_network>`
       * a :ref:`Windows module <developing_modules_general_windows>`.
       * an :ref:`Amazon module <ansible_collections.amazon.aws.docsite.dev_guide_intro>`.
-      * an :ref:`oVirt/RHV module <https://github.com/oVirt/ovirt-ansible-collection/blob/master/README-developers.md>`.
+      * an `oVirt/RHV module <https://github.com/oVirt/ovirt-ansible-collection/blob/master/README-developers.md>`_.
       * a :ref:`VMware module <ansible_collections.community.vmware.docsite.vmware_ansible_devguide>`.
    * I want to :ref:`write a series of related modules <developing_modules_in_groups>` that integrate Ansible with a new product (for example, a database, cloud provider, network platform, and so on).
 
@@ -46,6 +46,7 @@ Find the task that best describes what you want to do:
    * I want to :ref:`debug my module code <debugging_modules>`.
    * I want to :ref:`add tests <developing_testing>`.
    * I want to :ref:`document my module <module_documenting>`.
+   * I want to :ref:`improve documentation by using Ansible markup <ansible_markup>`.
    * I want to :ref:`document my set of modules for a network platform <documenting_modules_network>`.
    * I want to follow :ref:`conventions and tips for clean, usable module code <developing_modules_best_practices>`.
    * I want to :ref:`make sure my code runs on Python 2 and Python 3 <developing_python_3>`.
@@ -75,6 +76,7 @@ If you prefer to read the entire guide, here's a list of the pages in order.
    developing_python_3
    debugging
    developing_modules_documenting
+   ansible_markup
    sidecar
    developing_modules_general_windows
    developing_modules_in_groups

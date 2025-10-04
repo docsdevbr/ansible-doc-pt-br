@@ -469,11 +469,6 @@ Type: ``str``
 This argument passes the information to modules about their name. For more details see, the configuration option :ref:`DEFAULT_MODULE_NAME`.
 
 
-_ansible_string_conversion_action
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-This argument provides instructions about what modules should do after the values of the user-specified module parameters are converted to strings. For more details, see the :ref:`STRING_CONVERSION_ACTION` configuration option.
-
-
 _ansible_keep_remote_files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 

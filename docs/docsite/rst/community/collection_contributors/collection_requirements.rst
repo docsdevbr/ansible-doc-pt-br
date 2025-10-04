@@ -96,6 +96,9 @@ The following guidelines describe the required infrastructure for your collectio
   * If the collection has its own CoC, it MUST be evaluated by the :ref:`Diversity and Inclusion working group <working_group_list>` and confirmed as compatible with the :ref:`code_of_conduct`.
 
 * MUST be published to `Ansible Galaxy <https://galaxy.ansible.com>`_ with version 1.0.0 or later.
+
+  * Collection artifacts published on Ansible Galaxy MUST NOT be deleted once they appear in any Ansible release, even if it is a pre-release.
+
 * MUST contain only objects that follow the :ref:`Licensing rules <coll_licensing_req>`.
 * SHOULD NOT contain any large objects (binaries) comparatively to the current Galaxy tarball size limit of 20 MB, For example, do not include package installers for testing purposes.
 * SHOULD NOT contain any unnecessary files such as temporary files.
@@ -105,7 +108,7 @@ The following guidelines describe the required infrastructure for your collectio
 Python Compatibility
 ====================
 
-In addition to the Python requirements specified in this section, collections SHOULD adhere to the tips at :ref:`ansible-and-python-3`.
+In addition to the Python requirements specified in this section, collections SHOULD adhere to the tips at :ref:`ansible_and_python_3`.
 
 .. _coll_python_reqs:
 
@@ -199,7 +202,12 @@ Example: `meta/runtime.yml <https://github.com/ansible-collections/collection_te
 meta/execution-environment.yml
 ------------------------------
 
-If a collection has controller-side Python package and/or system package requirements, to allow easy :ref:`execution environment<getting_started_ee_index>` building, they SHOULD be listed in corresponding files under the ``meta`` directory, specified in ``meta/execution-environment.yml``, and `verified <https://ansible.readthedocs.io/projects/builder/en/latest/collection_metadata/#when-installing-collections-using-ansible-galaxy>`_.
+If a collection has controller-side Python package and/or system package requirements, to allow easy :ref:`execution environment<getting_started_ee_index>` building:
+
+* They SHOULD be listed in corresponding files under the ``meta`` directory, specified in ``meta/execution-environment.yml``, and `verified <https://ansible.readthedocs.io/projects/builder/en/latest/collection_metadata/#when-installing-collections-using-ansible-galaxy>`_.
+* The entries in the file SHOULD NOT have a version cap or be fixed. Entries like ``<=x.x.x`` or ``==x.x.x`` are not allowed. Only ``>=x.x.x`` entries (with or without ``,!=x.x.x``), or no specified version at all are allowed.
+
+  * This rule helps prevent issues during the creation of execution environments, particularly when bundling collections that have conflicting versions of the same dependencies. For instance, if one collection requires a fixed version of a dependency while another requires a higher version of the same dependency, the build process will fail.
 
 See the `Collection-level dependencies guide <https://ansible.readthedocs.io/projects/builder/en/latest/collection_metadata/#collection-level-dependencies>`_ for more information and `collection_template/meta <https://github.com/ansible-collections/collection_template/tree/main/meta>`_ directory content as an example.
 
@@ -227,19 +235,19 @@ Other directories
 .. _coll_docs_structure_reqs:
 
 Documentation requirements
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Collections:
 
-* ``MUST`` use :ref:`links and formatting macros <linking-and-other-format-macros-within-module-documentation>`.
+* ``MUST`` use :ref:`links and formatting macros <module_documents_linking>`.
 * ``SHOULD`` have contributor guidelines in the ``CONTRIBUTING.md`` or ``README.md`` file.
 
 All modules and plugins:
 
-* ``MUST`` include a :ref:`DOCUMENTATION <documentation-block>` block.
-* ``MUST`` include an :ref:`EXAMPLES <examples-block>` block (except where not relevant for the plugin type).
+* ``MUST`` include a :ref:`DOCUMENTATION <documentation_block>` block.
+* ``MUST`` include an :ref:`EXAMPLES <examples_block>` block (except where not relevant for the plugin type).
 * ``MUST`` use FQCNs when referring to modules, plugins and documentation fragments inside and outside the collection including ``ansible.builtin.`` for ansible-core.
-* ``MUST`` include a :ref:`RETURN <return-block>` block for modules and other plugins that return data.
+* ``MUST`` include a :ref:`RETURN <return_block>` block for modules and other plugins that return data.
 * ``MUST`` include the ``version_added`` field when adding new content to an existing collection for entities that support it, for example, for modules, plugins, options, return values, and attributes.
 
   * You do not have to add ``version_added`` when creating a new collection before its first release.
@@ -326,7 +334,7 @@ Module naming
 * Modules that only gather and return information MUST be named ``<something>_info``.
 * Modules that gather and return ``ansible_facts`` MUST be named ``<something>_facts`` and MUST NOT return anything but facts.
 
-For more information, refer to the :ref:`Developing modules guidelines <creating-an-info-or-a-facts-module>`.
+For more information, refer to the :ref:`Developing modules guidelines <creating_info_facts>`.
 
 .. _coll_licensing_req:
 
@@ -427,8 +435,8 @@ To receive important announcements that can affect the collections (for example,
 
   * Collections MUST run an equivalent of the ``ansible-test sanity --docker`` command.
 
-    * If they do not use ``--docker``, they must make sure that all tests run, in particular the compile and import tests (which should run for all :ref:`supported Python versions <ansible-and-python-3>`).
-    * Collections can choose to skip certain Python versions that they explicitly do not support; this needs to be documented in ``README.md`` and in every module and plugin (hint: use a docs fragment). However, we strongly recommend you follow the :ref:`Ansible Python Compatibility <ansible-and-python-3>` section for more details.
+    * If they do not use ``--docker``, they must make sure that all tests run, in particular the compile and import tests (which should run for all :ref:`supported Python versions <ansible_and_python_3>`).
+    * Collections can choose to skip certain Python versions that they explicitly do not support; this needs to be documented in ``README.md`` and in every module and plugin (hint: use a docs fragment). However, we strongly recommend you follow the :ref:`Ansible Python Compatibility <ansible_and_python_3>` section for more details.
 
 * You SHOULD *additionally* run ``ansible-test sanity`` from the ansible/ansible ``devel`` branch so that you find out about new linting requirements earlier.
 * The sanity tests MUST pass.
@@ -493,10 +501,10 @@ Development conventions
 All modules in your collection:
 
 * MUST satisfy all the requirements listed in the :ref:`module_dev_conventions`.
-* MUST satisfy the concept of :ref:`idempotency <term-Idempotency>`: if a module repeatedly runs with the same set of inputs, it will not make any changes on the system.
+* MUST satisfy the concept of :term:`idempotency <Idempotency>`: if a module repeatedly runs with the same set of inputs, it will not make any changes on the system.
 * MUST NOT query information using special ``state`` option values like ``get``, ``list``, ``query``, or ``info`` -
-  create new ``_info`` or ``_facts`` modules instead (for more information, refer to the :ref:`Developing modules guidelines <creating-an-info-or-a-facts-module>`).
-* ``check_mode`` MUST be supported by all ``*_info`` and ``*_facts`` modules (for more information, refer to the :ref:`Development conventions <#following-ansible-conventions>`).
+  create new ``_info`` or ``_facts`` modules instead (for more information, refer to the :ref:`Developing modules guidelines <creating_info_facts>`).
+* ``check_mode`` MUST be supported by all ``*_info`` and ``*_facts`` modules (for more information, refer to the :ref:`Development conventions <developing_modules_best_practices>`).
 
 .. _coll_dependencies:
 

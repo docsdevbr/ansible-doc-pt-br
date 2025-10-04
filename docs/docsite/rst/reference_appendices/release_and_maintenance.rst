@@ -81,10 +81,11 @@ This table links to the changelogs for each major Ansible release. These changel
 ==================================      ==============================================      =========================
 Ansible Community Package Release       Status                                              Core version dependency
 ==================================      ==============================================      =========================
-12.0.0                                  In development (unreleased)                         2.19
-`11.x Changelogs`_                      Current                                             2.18
-`10.x Changelogs`_                      EOL after 10.7                                      2.17
-`9.x Changelogs`_                       EOL after 9.13                                      2.16
+13.0.0                                  In development (unreleased)                         2.20
+`12.x Changelogs`_                      Current- Latest                                     2.19
+`11.x Changelogs`_                      Extended maintenance                                2.18
+`10.x Changelogs`_                      Unmaintained (end of life)                          2.17
+`9.x Changelogs`_                       Unmaintained (end of life)                          2.16
 `8.x Changelogs`_                       Unmaintained (end of life)                          2.15
 `7.x Changelogs`_                       Unmaintained (end of life)                          2.14
 `6.x Changelogs`_                       Unmaintained (end of life)                          2.13
@@ -94,6 +95,7 @@ Ansible Community Package Release       Status                                  
 `2.10 Changelogs`_                      Unmaintained (end of life)                          2.10
 ==================================      ==============================================      =========================
 
+.. _12.x Changelogs: https://github.com/ansible-community/ansible-build-data/blob/main/12/CHANGELOG-v12.md
 .. _11.x Changelogs: https://github.com/ansible-community/ansible-build-data/blob/main/11/CHANGELOG-v11.md
 .. _10.x Changelogs: https://github.com/ansible-community/ansible-build-data/blob/main/10/CHANGELOG-v10.md
 .. _9.x Changelogs: https://github.com/ansible-community/ansible-build-data/blob/main/9/CHANGELOG-v9.rst
@@ -166,6 +168,22 @@ Dates listed indicate the start date of the maintenance cycle.
      - End Of Life
      - Control Node Python
      - Target Python / PowerShell
+   * - `2.20`_
+     - | GA: 03 Nov 2025
+       | Critical: 18 May 2026
+       | Security: 02 Nov 2026
+     - May 2027
+     - | Python 3.12 - 3.14
+     - | Python 3.9 - 3.14
+       | PowerShell 5.1
+   * - `2.19`_
+     - | GA: 21 July 2025
+       | Critical: 03 Nov 2025
+       | Security: 18 May 2026
+     - Nov 2026
+     - | Python 3.11 - 3.13
+     - | Python 3.8 - 3.13
+       | PowerShell 5.1
    * - `2.18`_
      - | GA: 04 Nov 2024
        | Critical: 19 May 2025
@@ -186,7 +204,8 @@ Dates listed indicate the start date of the maintenance cycle.
      - | GA: 06 Nov 2023
        | Critical: 20 May 2024
        | Security: Nov 2024
-     - May 2025
+     - | **EOL**
+       | July 2025
      - | Python 3.10 - 3.12
      - | Python 2.7
        | Python 3.6 - 3.12
@@ -264,22 +283,6 @@ Dates listed indicate the start date of the maintenance cycle.
      - | Python 2.6 - 2.7
        | Python 3.5 - 3.8
        | PowerShell 3 - 5.1
-..    * - 2.19
-..      - May 2025
-..      - Nov 2025
-..      - May 2026
-..      - Nov 2026
-..      - | Python 3.11 - 3.13
-..      - | Python 3.8 - 3.13
-..        | PowerShell 5.1
-..    * - 2.20
-..      - Nov 2025
-..      - May 2026
-..      - Nov 2026
-..      - May 2027
-..      - | Python 3.12 - 3.14
-..      - | Python 3.9 - 3.14
-..        | PowerShell 5.1
 ..    * - 2.21
 ..      - May 2026
 ..      - Nov 2026
@@ -332,8 +335,39 @@ Dates listed indicate the start date of the maintenance cycle.
 .. _2.16: https://github.com/ansible/ansible/blob/stable-2.16/changelogs/CHANGELOG-v2.16.rst
 .. _2.17: https://github.com/ansible/ansible/blob/stable-2.17/changelogs/CHANGELOG-v2.17.rst
 .. _2.18: https://github.com/ansible/ansible/blob/stable-2.18/changelogs/CHANGELOG-v2.18.rst
+.. _2.19: https://github.com/ansible/ansible/blob/stable-2.19/changelogs/CHANGELOG-v2.19.rst
+.. _2.20: https://github.com/ansible/ansible/blob/stable-2.20/changelogs/CHANGELOG-v2.20.rst
 
+.. _ansible_core_versioning:
 
+``ansible-core`` versioning
+---------------------------
+
+The ansible-core project uses a historical versioning scheme, most similar to the versioning scheme used by Python.
+
+This scheme follows the formatting of ``X.Y.Z`` which is described in detail below.
+
+What is the ``X`` in ``X.Y.Z``?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The ``X`` represents the internal architecture of ``ansible-core``. The ``X`` here does not imply any form of compatibility, nor anything about the scope of the changes.
+
+-  ``v1`` can be best described as the internal architecture revolving around ``ansible.runner.Runner`` as the "execution" engine
+-  ``v2`` can be best described as the internal architecture revolving around the ``TaskQueueManager``, ``PlayIterator``, and the strategy as the "execution" engine
+
+What is the ``Y`` in ``X.Y.Z``?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Approximately every 6 months, in May and November ansible-core releases a new *Major* release. This is denoted by the ``Y`` in the ``X.Y.Z`` version scheme.
+
+Although the ``Y`` denotes the Major version, it is not referenced independently, and instead a Major version is indicated in the format of ``X.Y``, such as ``2.16``.
+
+As such, versions like ``2.9.0``, ``2.10.0``, ``2.11.0``, ``2.16.0`` and ``2.19.0`` are all major releases. ``X.Y.0`` releases do not carry any guarantee of 100% backwards compatibility with the version before it. Some may be more or less impactful based on the scope of the work for the release. Check porting guides for changes that may necessitate user intervention.
+
+What is the ``Z`` in ``X.Y.Z``?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This is the patch version. ansible-core operates on a 4 week patch schedule. The ``Z`` release of a major version will include bugfixes and security fixes as outlined in the :ref:`ansible_core_support_matrix`.
 
 Preparing for a new release
 ===========================
