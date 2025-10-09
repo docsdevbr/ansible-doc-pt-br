@@ -49,7 +49,7 @@ coleções, com muito mais rapidez.
 
 .. toctree::
   :maxdepth: 2
-  :caption: Usando Ansible
+  :caption: Usando o Ansible
 
   inventory_guide/index
   command_guide/index
