@@ -5,11 +5,12 @@
   The original work was translated from English into Brazilian Portuguese.
   https://github.com/ansible/ansible-documentation/blob/-/COPYING
 
-  source_url: https://github.com/ansible/ansible-documentation/blob/stable-2.20/docs/docsite/rst/ansible_index.rst
+  source_url: https://github.com/ansible/ansible-documentation/blob/devel/docs/docsite/rst/ansible_index.rst
   revision: dbae0ce87d8d2a89c6e3cf0651505e39c841b390
   status: ready
 
 .. _ansible_documentation:
+
 ..
   Este é o arquivo index do pacote Ansible.
   Ele é vinculado simbolicamente ao index.rst pelo Makefile.
