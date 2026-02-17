@@ -10,6 +10,7 @@
   status: ready
 
 .. _ansible_documentation:
+
 ..
   Este é o arquivo index do pacote Ansible.
   Ele é vinculado simbolicamente ao index.rst pelo Makefile.
