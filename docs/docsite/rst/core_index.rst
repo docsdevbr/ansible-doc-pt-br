@@ -5,7 +5,7 @@
   The original work was translated from English into Brazilian Portuguese.
   https://github.com/ansible/ansible-documentation/blob/-/COPYING
 
-  source_url: https://github.com/ansible/ansible-documentation/blob/stable-2.20/docs/docsite/rst/core_index.rst
+  source_url: https://github.com/ansible/ansible-documentation/blob/devel/docs/docsite/rst/core_index.rst
   revision: 0bc0a653c5b6af0e5452d4be8ac28d5d186e789d
   status: ready
 
@@ -23,10 +23,10 @@ O Ansible Core, ou ``ansible-core``, é o principal bloco de construção e
 arquitetura do Ansible e inclui:
 
 * Ferramentas de CLI, como ``ansible-playbook``, ``ansible-doc`` e outras para
-  conduzir e interagir com a automação;
+  conduzir e interagir com a automação.
 * A linguagem Ansible que usa YAML para criar um conjunto de regras para o
   desenvolvimento de playbooks Ansible e inclui funções como condicionais,
-  blocos, inclusões, laços e outros imperativos do Ansible;
+  blocos, inclusões, laços e outros imperativos do Ansible.
 * Um framework arquitetural que permite extensões por meio de coleções do
   Ansible.
 
@@ -42,7 +42,7 @@ O ``ansible-core`` lança uma nova versão principal aproximadamente duas vezes
 por ano.
 A aplicação principal evolui de forma um tanto conservadora, valorizando a
 simplicidade no design e na configuração da linguagem.
-As pessoas colaboradores desenvolvem e alteram módulos e plugins, hospedados em
+As pessoas colaboradoras desenvolvem e alteram módulos e plugins, hospedados em
 coleções, com muito mais rapidez.
 
 .. toctree::
