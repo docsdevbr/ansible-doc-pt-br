@@ -1,14 +1,13 @@
-<!--
-Copyright (c) The Ansible project contributors.
+..
+  Copyright (c) The Ansible project contributors.
 
-Documentation licensed under the GNU General Public License Version 3.
-The original work was translated from English into Brazilian Portuguese.
-https://github.com/ansible/ansible-documentation/blob/-/COPYING
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/ansible/ansible-documentation/blob/-/COPYING
 
-source_url: https://github.com/ansible/ansible-documentation/blob/stable-2.20/docs/docsite/rst/ansible_index.rst
-revision: dbae0ce87d8d2a89c6e3cf0651505e39c841b390
-status: ready
--->
+  source_url: https://github.com/ansible/ansible-documentation/blob/stable-2.20/docs/docsite/rst/ansible_index.rst
+  revision: dbae0ce87d8d2a89c6e3cf0651505e39c841b390
+  status: ready
 
 .. _ansible_documentation:
 ..
