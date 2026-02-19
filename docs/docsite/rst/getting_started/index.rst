@@ -5,7 +5,7 @@
   The original work was translated from English into Brazilian Portuguese.
   https://github.com/ansible/ansible-documentation/blob/-/COPYING
 
-  source_url: https://github.com/ansible/ansible-documentation/blob/stable-2.20/docs/docsite/rst/getting_started/index.rst
+  source_url: https://github.com/ansible/ansible-documentation/blob/devel/docs/docsite/rst/getting_started/index.rst
   revision: bd2ce70a0f3c74a6ee06a9e41e168fc0a03d2ff8
   status: ready
 
