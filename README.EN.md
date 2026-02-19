@@ -6,7 +6,7 @@
 [![Contributors][badge-contributors]][contributors]
 [![GitHub Sponsors][badge-github-sponsors]][github-sponsors]
 
-Translation of the Ansible Documentation into Brazilian Portuguese.
+Translation of the Ansible documentation into Brazilian Portuguese.
 
 ## Contributing
 
@@ -30,7 +30,7 @@ You can support the project through [GitHub Sponsors][github-sponsors] or
 Copyright (c) The Ansible project contributors.
 
 Documentation licensed under the
-[GNU General Public License Version 3][license].<br>
+[GNU General Public License Version 3][license].<br/>
 The original work was translated from English into Brazilian Portuguese.
 
 [badge-contributors]: https://img.shields.io/github/contributors/docsdevbr/ansible-doc-pt-br
@@ -53,7 +53,7 @@ The original work was translated from English into Brazilian Portuguese.
 
 [license]: LICENSE.md
 
-[page]: https://pt.docs.dev.br/p/ansible/docs/
+[page]: https://pt.docs.dev.br/tech/a/ansible/
 
 [readme-en]: README.EN.md
 

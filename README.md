@@ -6,7 +6,7 @@
 [![Pessoas contribuidoras][badge-contributors]][contributors]
 [![GitHub Sponsors][badge-github-sponsors]][github-sponsors]
 
-Tradução da Documentação do Ansible para português brasileiro.
+Tradução da documentação do Ansible para português brasileiro.
 
 ## Contribuindo
 
@@ -52,7 +52,7 @@ A obra original foi traduzida do inglês para o português brasileiro.
 
 [license]: LICENSE.md
 
-[page]: https://pt.docs.dev.br/p/ansible/docs/
+[page]: https://pt.docs.dev.br/tech/a/ansible/
 
 [readme-en]: README.EN.md
 
