@@ -51,7 +51,7 @@ The original work was translated from English into Brazilian Portuguese.
 
 [github-sponsors]: https://github.com/sponsors/docsdevbr
 
-[license]: LICENSE.md
+[license]: LICENSE
 
 [page]: https://pt.docs.dev.br/tech/a/ansible/index.html
 
