@@ -29,7 +29,8 @@ Você pode apoiar o projeto através do [GitHub Sponsors][github-sponsors] ou
 
 Copyright (c) The Ansible project contributors.
 
-Documentação licenciada sob a [Licença Pública Geral GNU Versão 3][license].<br>
+Documentação licenciada sob a
+[Licença Pública Geral GNU Versão 3][license].<br/>
 A obra original foi traduzida do inglês para o português brasileiro.
 
 [badge-contributors]: https://img.shields.io/github/contributors/docsdevbr/ansible-doc-pt-br
