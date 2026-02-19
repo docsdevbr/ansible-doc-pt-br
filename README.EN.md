@@ -20,10 +20,10 @@ We are committed to providing a welcoming community.
 Please read our [Code of Conduct][code-of-conduct] to understand our community
 standards.
 
-## Support
+## Sponsor
 
-You can support the project through [GitHub Sponsors][github-sponsors] or
-[Pix][sponsor].
+Please visit our [sponsor page][sponsor] to know how you can support the
+project.
 
 ## License
 
@@ -43,9 +43,9 @@ The original work was translated from English into Brazilian Portuguese.
 
 [badge-readme-pt-br]: https://img.shields.io/badge/lang-pt--br-blue
 
-[code-of-conduct]: https://github.com/docsdevbr/.github/blob/main/CODE_OF_CONDUCT.md
+[code-of-conduct]: https://github.com/docsdevbr/.github/blob/main/CODE_OF_CONDUCT.EN.md
 
-[contributing]: https://github.com/docsdevbr/.github/blob/main/CONTRIBUTING.md
+[contributing]: https://github.com/docsdevbr/.github/blob/main/CONTRIBUTING.EN.md
 
 [contributors]: https://github.com/docsdevbr/ansible-doc-pt-br/graphs/contributors
 
