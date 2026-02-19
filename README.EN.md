@@ -53,10 +53,10 @@ The original work was translated from English into Brazilian Portuguese.
 
 [license]: LICENSE.md
 
-[page]: https://pt.docs.dev.br/tech/a/ansible/
+[page]: https://pt.docs.dev.br/tech/a/ansible/index.html
 
 [readme-en]: README.EN.md
 
 [readme-pt-br]: README.md
 
-[sponsor]: https://pt.docs.dev.br/sponsor
+[sponsor]: https://pt.docs.dev.br/sponsor.html
