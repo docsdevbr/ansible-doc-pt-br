@@ -1,34 +1,50 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/ansible/ansible-documentation/blob/-/COPYING
+
+  source_url: https://github.com/ansible/ansible-documentation/blob/devel/docs/docsite/rst/getting_started/get_started_ansible.rst
+  revision: 5c0dd1f520aea2b7a000023841f212fdd06dcd57
+  status: ready
+
 .. _get_started_ansible:
 
-*****************************
-Start automating with Ansible
-*****************************
+**********************************
+Comece a automatizar com o Ansible
+**********************************
 
-Get started with Ansible by creating an automation project, building an inventory, and creating a "Hello World" playbook.
+Comece a usar o Ansible criando um projeto de automação, construindo um
+inventário e criando um playbook "Olá, Mundo!".
 
-#. Install Ansible.
-
-   .. code-block:: bash
-
-      pip install ansible
-
-#. Create a project folder on your filesystem.
+#. Instale o Ansible.
 
    .. code-block:: bash
 
-      mkdir ansible_quickstart && cd ansible_quickstart
+     pip install ansible
 
-   Using a single directory structure makes it easier to add to source control as well as to reuse and share automation content.
+#. Crie uma pasta para o projeto no seu sistema de arquivos.
 
-Continue getting started with Ansible by :ref:`building an inventory<get_started_inventory>`.
+   .. code-block:: bash
+
+     mkdir ansible_quickstart && cd ansible_quickstart
+
+  Usar uma estrutura de diretórios única facilita a adição ao controle de
+  versão, bem como a reutilização e o compartilhamento de conteúdo de
+  automação.
+
+Continue seus primeiros passos com o Ansible
+:ref:`construindo um inventário<get_started_inventory>`.
 
 .. seealso::
 
-   :ref:`installation_guide`
-       Installation guide with instructions for installing Ansible on various operating systems
-   `Ansible Demos <https://github.com/ansible/product-demos>`_
-       Demonstrations of different Ansible usecases
-   `Ansible Labs <https://www.ansible.com/products/ansible-training>`_
-       Labs to provide further knowledge on different topics
-   :ref:`Ansible Communication Guide<communication>`
-       Questions? Help? Ideas? Ask the community
+  :ref:`installation_guide`
+    Guia de instalação com instruções para instalar o Ansible em diversos
+    sistemas operacionais.
+  `Ansible Demos <https://github.com/ansible/product-demos>`_
+    Demonstrações de diferentes casos de uso do Ansible.
+  `Ansible Labs <https://www.ansible.com/products/ansible-training>`_
+    Laboratórios para aprofundar o conhecimento sobre diferentes tópicos.
+  :ref:`Guia de Comunicação Ansible<communication>`
+    Dúvidas? Ajuda? Ideias? Pergunte à comunidade.
