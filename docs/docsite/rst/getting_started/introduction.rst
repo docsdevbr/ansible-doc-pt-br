@@ -1,35 +1,56 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/ansible/ansible-documentation/blob/-/COPYING
+
+  source_url: https://github.com/ansible/ansible-documentation/blob/stable-2.20/docs/docsite/rst/getting_started/introduction.rst
+  revision: aad8488440321ef5722f6a8d2b6a15f7179bf7fb
+  status: ready
+
 .. _introduction_to_ansible:
 
-***********************
-Introduction to Ansible
-***********************
+*********************
+Introdução ao Ansible
+*********************
 
-Ansible provides open-source automation that reduces complexity and runs everywhere.
-Using Ansible lets you automate virtually any task.
-Here are some common use cases for Ansible:
+O Ansible oferece automação de código aberto que reduz a complexidade e funciona
+em qualquer lugar.
+Usar o Ansible permite automatizar praticamente qualquer tarefa.
+Aqui estão alguns casos de uso comuns para o Ansible:
 
-* Eliminate repetition and simplify workflows
-* Manage and maintain system configuration
-* Continuously deploy complex software
-* Perform zero-downtime rolling updates
+* Eliminar repetições e simplificar fluxos de trabalho.
+* Gerenciar e manter a configuração do sistema.
+* Implantar continuamente softwares complexos.
+* Realizar atualizações contínuas sem tempo de inatividade.
 
-Ansible uses simple, human-readable scripts called playbooks to automate your tasks.
-You declare the desired state of a local or remote system in your playbook.
-Ansible ensures that the system remains in that state.
+O Ansible usa scripts simples e legíveis por pessoas, chamados playbooks, para
+automatizar suas tarefas.
+Você declara o estado desejado de um sistema local ou remoto em seu playbook.
+O Ansible garante que o sistema permaneça nesse estado.
 
-As automation technology, Ansible is designed around the following principles:
+Como tecnologia de automação, o Ansible foi projetado com base nos seguintes
+princípios:
 
-Agent-less architecture
-    Low maintenance overhead by avoiding the installation of additional software across IT infrastructure.
+Arquitetura sem agentes
+  Baixa sobrecarga de manutenção, evitando a instalação de software adicional
+  na infraestrutura de TI.
 
-Simplicity
-    Automation playbooks use straightforward YAML syntax for code that reads like documentation. Ansible is also decentralized, using SSH with existing OS credentials to access to remote machines.
+Simplicidade
+  Os playbooks de automação usam uma sintaxe YAML direta no código, que se lê
+  como documentação.
+  O Ansible também é descentralizado, usando SSH com credenciais de sistema
+  operacional existentes para acessar máquinas remotas.
 
-Scalability and flexibility
-    Easily and quickly scale the systems you automate through a modular design that supports a large range of operating systems, cloud platforms, and network devices.
+Escalabilidade e flexibilidade
+  Escalar os sistemas que você automatiza de forma fácil e rápida, graças a um
+  design modular que suporta uma ampla gama de sistemas operacionais,
+  plataformas em nuvem e dispositivos de rede.
 
-Idempotence and predictability
-    When the system is in the state your playbook describes, Ansible does not change anything, even if the playbook runs multiple times.
+Idempotência e previsibilidade
+  Quando o sistema está no estado descrito pelo seu playbook, o Ansible não
+  altera nada, mesmo que o playbook seja executado várias vezes.
 
-Ready to start using Ansible?
-:ref:`Get up and running in a few easy steps<get_started_ansible>`.
+Já pode começar a usar o Ansible?
+:ref:`Comece em poucos passos<get_started_ansible>`.
