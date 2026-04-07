@@ -1,11 +1,19 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-or-later
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-or-later.txt
+
 .. _installing_distros:
 
 Installing Ansible on specific operating systems
 ================================================
 
-.. note:: 
-   These instructions come from their respective communities. 
-   If you encounter bugs or issues, file them with that community to update these instructions. 
+.. note::
+   These instructions come from their respective communities.
+   If you encounter bugs or issues, file them with that community to update these instructions.
    Ansible maintains only the ``pip install`` instructions.
 
 You can always :ref:`install the ansible package from PyPI using pip <intro_installation_guide>` on most systems.
@@ -95,10 +103,10 @@ Configure the PPA on your system and install Ansible:
     $ sudo add-apt-repository --yes --update ppa:ansible/ansible
     $ sudo apt install ansible
 
-.. note:: 
-   On older Ubuntu distributions, "software-properties-common" is called "python-software-properties". 
-   You may want to use ``apt-get`` rather than ``apt`` in older versions. 
-   Also, only newer distributions (18.04, 18.10, and later) have a ``-u`` or ``--update`` flag. 
+.. note::
+   On older Ubuntu distributions, "software-properties-common" is called "python-software-properties".
+   You may want to use ``apt-get`` rather than ``apt`` in older versions.
+   Also, only newer distributions (18.04, 18.10, and later) have a ``-u`` or ``--update`` flag.
    Adjust your script as needed.
 
 File any issues in `the PPA's issue tracker <https://github.com/ansible-community/ppa/issues>`_.

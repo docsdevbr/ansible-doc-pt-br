@@ -1,3 +1,11 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-or-later
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-or-later.txt
+
 Glossary
 ========
 
@@ -355,7 +363,7 @@ when a term comes up on the :ref:`Ansible Forum<ansible_forum>`.
 
     paramiko
         Ansible can use a Python SSH implementation called ``paramiko``.
-        The paramiko library is generally fast and easy to manage. 
+        The paramiko library is generally fast and easy to manage.
         To use paramiko you need to specify the connection type in your :term:`playbooks`, or by using the ``-c paramiko`` flag.
 
     Playbooks

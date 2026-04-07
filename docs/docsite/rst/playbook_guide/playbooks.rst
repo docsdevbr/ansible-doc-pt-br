@@ -1,3 +1,11 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-or-later
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-or-later.txt
+
 .. _working_with_playbooks:
 
 Working with playbooks
@@ -8,7 +16,7 @@ They can describe a policy you want your remote systems to enforce, or a set of 
 
 If Ansible modules are the tools in your workshop, playbooks are your instruction manuals, and your inventory of hosts is your raw material.
 
-At a basic level, playbooks can be used to manage configurations of and deployments to remote machines. 
+At a basic level, playbooks can be used to manage configurations of and deployments to remote machines.
 At a more advanced level, they can sequence multi-tier rollouts involving rolling updates and can delegate actions to other hosts, interacting with monitoring servers and load balancers along the way.
 
 Playbooks are designed to be human-readable and are developed in a basic text language.

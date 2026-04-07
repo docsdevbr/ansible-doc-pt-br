@@ -1,3 +1,11 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-or-later
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-or-later.txt
+
 .. _using_galaxy:
 .. _ansible_galaxy:
 
@@ -8,7 +16,7 @@ Galaxy User Guide
 :dfn:`Ansible Galaxy` refers to the `Galaxy <https://galaxy.ansible.com>`_  website, a free site for finding, downloading, and sharing community developed collections and roles.
 
 Use Galaxy to jump-start your automation project with great content from the Ansible community. Galaxy provides pre-packaged units of work such as :ref:`roles <playbooks_reuse_roles>`, and :ref:`collections <collections>`.
-The collection format provides a comprehensive package of automation that may include multiple playbooks, roles, modules, and plugins. See the `Galaxy documentation <https://ansible.readthedocs.io/projects/galaxy-ng/en/latest/>`_ for full details on Galaxy. 
+The collection format provides a comprehensive package of automation that may include multiple playbooks, roles, modules, and plugins. See the `Galaxy documentation <https://ansible.readthedocs.io/projects/galaxy-ng/en/latest/>`_ for full details on Galaxy.
 
 .. contents::
    :local:
@@ -43,7 +51,7 @@ To find standalone roles (that is roles that are not part of a collection):
 
 Galaxy presents a list of roles that match your search criteria.
 
-You can optionally search the Galaxy database by tags, platforms, author and multiple keywords using the ``ansible-galaxy`` CLI command. 
+You can optionally search the Galaxy database by tags, platforms, author and multiple keywords using the ``ansible-galaxy`` CLI command.
 
 .. code-block:: bash
 

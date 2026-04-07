@@ -1,3 +1,11 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-or-later
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-or-later.txt
+
 .. _migrate_to_collection:
 
 ***************************************************
@@ -6,7 +14,7 @@ Migrating Ansible content to a different collection
 
 You might decide to move content from one collection to another; for example, to extract a set of related modules out of ``community.general`` or ``community.network`` to create a more focused collection.
 When you migrate content between collections, you must take certain steps to ensure users can follow the transition.
- 
+
 .. contents::
    :local:
    :depth: 2
@@ -27,7 +35,7 @@ If the collection from which you are going to migrate content is included in the
   * remove related unit and integration tests
   * remove specific module utils (if they are NOT used by other modules/plugins or ``module_utils``)
   * remove specific documentation fragments if there are any in the old collection
-  * add a changelog fragment containing entries for ``removed_features`` and ``breaking_changes``; you can see an example of a changelog fragment in this `pull request <https://github.com/ansible-collections/community.general/pull/1304>`_ 
+  * add a changelog fragment containing entries for ``removed_features`` and ``breaking_changes``; you can see an example of a changelog fragment in this `pull request <https://github.com/ansible-collections/community.general/pull/1304>`_
   * change ``meta/runtime.yml`` in the old collection:
 
     * add ``redirect`` to the corresponding module/plugin's entry

@@ -2,7 +2,7 @@
 
 [![Arquivo README em inglês][badge-readme-en]][readme-en]
 [![Arquivo README em português brasileiro][badge-readme-pt-br]][readme-pt-br]
-[![Licença: GPL-3.0][badge-license]][license]
+[![Licença: GPL-3.0-or-later][badge-license]][license]
 [![Pessoas contribuidoras][badge-contributors]][contributors]
 [![GitHub Sponsors][badge-github-sponsors]][github-sponsors]
 
@@ -51,7 +51,7 @@ A obra original foi traduzida do inglês para o português brasileiro.
 
 [github-sponsors]: https://github.com/sponsors/docsdevbr
 
-[license]: LICENSE
+[license]: LICENSES/GPL-3.0-or-later.txt
 
 [page]: https://pt.docs.dev.br/tech/a/ansible/index.html
 

@@ -1,3 +1,11 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-or-later
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-or-later.txt
+
 
 You can set up a ``requirements.yml`` file to install multiple collections in one command. This file is a YAML file in the format:
 
@@ -21,7 +29,7 @@ You can specify the following keys for each collection entry:
   * ``source``
   * ``type``
 
-The ``version`` key uses the same range identifier format documented in :ref:`collections_older_version`. 
+The ``version`` key uses the same range identifier format documented in :ref:`collections_older_version`.
 
 The ``signatures`` key accepts a list of signature sources that are used to supplement those found on the Galaxy server during collection installation and ``ansible-galaxy collection verify``. Signature sources should be URIs that contain the detached signature. The ``--keyring`` CLI option must be provided if signatures are specified.
 

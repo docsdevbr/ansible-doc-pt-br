@@ -1,5 +1,13 @@
+..
+  Copyright (c) The Ansible project contributors.
 
-Grammar and Punctuation 
+  SPDX-License-Identifier: GPL-3.0-or-later
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-or-later.txt
+
+
+Grammar and Punctuation
 =======================
 
 Common Styles and Usage, and Common Mistakes
@@ -35,7 +43,7 @@ wedge The steps for changing directories are as follows:
 Use a colon to introduce a bullet list (or dash, or icon/symbol of your choice):
 
     In the Properties dialog box, you'll find the following entries:
-    
+
     - Connection name
     - Count
     - Cost per item
@@ -43,11 +51,11 @@ Use a colon to introduce a bullet list (or dash, or icon/symbol of your choice):
 
 Commas
 ^^^^^^
-Use serial commas, the comma before the "and" in a series of three or more items: 
+Use serial commas, the comma before the "and" in a series of three or more items:
 
 - "Item 1, item 2, and item 3."
 
-   
+
 It is easier to read that way and helps avoid confusion. The primary exception to this you will see is in PR, where it is traditional not to use serial commas because it is often the style of journalists.
 
 Commas are always important, considering the vast difference in meanings of the following two statements.
@@ -99,9 +107,9 @@ Do not use them at the end of sentences. An exclamation point can be used when r
 
 Gender References
 ^^^^^^^^^^^^^^^^^
-Do not use gender-specific pronouns in documentation. It is far less awkward to read a sentence that uses "they" and "their" rather than "he/she" and "his/hers." 
+Do not use gender-specific pronouns in documentation. It is far less awkward to read a sentence that uses "they" and "their" rather than "he/she" and "his/hers."
 
-It is fine to use "you" when giving instructions and "the user," "new users," and so on. in more general explanations. 
+It is fine to use "you" when giving instructions and "the user," "new users," and so on. in more general explanations.
 
 Never use "one" in place of "you" when writing technical documentation. Using "one" is far too formal.
 
@@ -177,10 +185,10 @@ Quotations (Using Quotation Marks and Writing Quotes)
 Except in rare instances, use only "said" or "says" because anything else just gets in the way of the quote itself, and also tends to editorialize.
 
 Place the name first right after the quote:
-     "I like to write first-person because I like to become the character I'm writing," Wally Lamb said. 
+     "I like to write first-person because I like to become the character I'm writing," Wally Lamb said.
 
 Not:
-       "I like to write first-person because I like to become the character I'm writing," said Wally Lamb. 
+       "I like to write first-person because I like to become the character I'm writing," said Wally Lamb.
 
 
 Semicolon

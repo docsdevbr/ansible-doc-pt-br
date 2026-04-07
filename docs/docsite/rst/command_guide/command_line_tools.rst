@@ -1,3 +1,11 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-or-later
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-or-later.txt
+
 .. _command_line_tools:
 
 Working with command line tools
@@ -8,7 +16,7 @@ Below is a complete list of Ansible utilities. Each page contains a description 
 
 .. note::
     You should not run most Ansible CLI tools in parallel against the same targets.
-    
+
 .. toctree::
    :maxdepth: 1
 

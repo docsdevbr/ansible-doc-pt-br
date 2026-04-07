@@ -1,3 +1,11 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-or-later
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-or-later.txt
+
 .. _how_can_i_help:
 
 ***************
@@ -67,7 +75,7 @@ You can also get started with solving GitHub issues labeled with the ``easyfix``
 - `Ansible collections <https://github.com/search?q=user%3Aansible-collections+label%3Aeasyfix%2C%22good+first+issue%22+state%3Aopen&type=Issues>`_
 - `All other Ansible projects <https://github.com/search?q=user%3Aansible+user%3Aansible-community+label%3Aeasyfix%2C%22good+first+issue%22+state%3Aopen&type=Issues>`_
 
-When you choose an issue to work on, add a comment directly on the GitHub issue to say you are looking at it and let others know to avoid conflicting work. 
+When you choose an issue to work on, add a comment directly on the GitHub issue to say you are looking at it and let others know to avoid conflicting work.
 You can also ask for help in a comment if you need it.
 
 For collections, refer to the :ref:`collection_quickstart` page to learn how to quickly set up your local environment, test your changes, and submit a ready-for-review pull request.

@@ -1,3 +1,11 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-or-later
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-or-later.txt
+
 .. _playbooks_conditionals:
 
 ************
@@ -100,7 +108,7 @@ You can store Ansible facts as variables to use for conditional logic, as in the
         - name: Restart the system if the temperature is too high
           when: temperature | float > 90
           shell: "reboot"
-          
+
 .. _conditionals_registered_vars:
 
 Conditions based on registered variables
@@ -191,7 +199,7 @@ Ansible always registers something in a registered variable for every host, even
       - name: Run only if the task that registered the "result" variable changed something.
         ansible.builtin.command: /bin/still/something_else
         when: result is changed
-        
+
 .. note:: Older versions of Ansible used ``success`` and ``fail``, but ``succeeded`` and ``failed`` use the correct tense. All of these options are now valid.
 
 
@@ -482,14 +490,14 @@ For example, you can template out a configuration file that is very different be
 Debugging conditionals
 ======================
 
-If your conditional ``when`` statement is not behaving as you intended, you can add a ``debug`` statement to determine if the condition evaluates to ``true`` or ``false``. A common cause of unexpected behavior in conditionals is testing an integer as a string or a string as an integer. To debug a conditional statement, add the entire statement as the ``var:`` value in a ``debug`` task. Ansible then shows the test and how the statement evaluates. For example, here is a set of tasks and sample output: 
+If your conditional ``when`` statement is not behaving as you intended, you can add a ``debug`` statement to determine if the condition evaluates to ``true`` or ``false``. A common cause of unexpected behavior in conditionals is testing an integer as a string or a string as an integer. To debug a conditional statement, add the entire statement as the ``var:`` value in a ``debug`` task. Ansible then shows the test and how the statement evaluates. For example, here is a set of tasks and sample output:
 
 .. code-block:: yaml
 
    - name: check value of return code
      ansible.builtin.debug:
        var: bar_status.rc
-       
+
    - name: check test for rc value as string
      ansible.builtin.debug:
        var: bar_status.rc == "127"

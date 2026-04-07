@@ -1,3 +1,11 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-or-later
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-or-later.txt
+
 :orphan:
 
 .. _testing_integration:
@@ -244,5 +252,5 @@ For guidance on writing network test see :ref:`testing_resource_modules`.
 Where to find out more
 ======================
 
-If you'd like to know more about the plans for improving testing Ansible, join the 
+If you'd like to know more about the plans for improving testing Ansible, join the
 `Ansible community forum <https://forum.ansible.com/>`_

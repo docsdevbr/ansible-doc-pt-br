@@ -1,3 +1,11 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-or-later
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-or-later.txt
+
 .. _vars_and_facts:
 
 ************************************************
@@ -499,7 +507,7 @@ To reference the system hostname:
 
     {{ ansible_facts['nodename'] }}
 
-Note that `ansible_` prefix shown in the setup module output is not used when addressing these variables. 
+Note that `ansible_` prefix shown in the setup module output is not used when addressing these variables.
 
 You can use facts in conditionals (see :ref:`playbooks_conditionals`) and also in templates. You can also use facts to create dynamic groups of hosts that match particular criteria, see the :ref:`group_by module <group_by_module>` documentation for details.
 

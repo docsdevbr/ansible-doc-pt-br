@@ -1,9 +1,10 @@
 ..
   Copyright (c) The Ansible project contributors.
 
+  SPDX-License-Identifier: GPL-3.0-or-later
   Documentation licensed under the GNU General Public License Version 3.
   The original work was translated from English into Brazilian Portuguese.
-  https://github.com/ansible/ansible-documentation/blob/-/COPYING
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-or-later.txt
 
   source_url: https://github.com/ansible/ansible-documentation/blob/devel/docs/docsite/rst/getting_started/get_started_ansible.rst
   revision: 5c0dd1f520aea2b7a000023841f212fdd06dcd57

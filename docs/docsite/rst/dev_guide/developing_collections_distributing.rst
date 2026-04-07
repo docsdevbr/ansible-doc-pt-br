@@ -1,3 +1,11 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-or-later
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-or-later.txt
+
 .. _distributing_collections:
 
 ************************
@@ -336,7 +344,7 @@ Reviewing your collection
 
 Review the collection:
 
-* Run a playbook that uses the modules and plugins in your collection. Verify that new features and functionality work as expected. For examples and more details see :ref:`Using collections <using_collections>`. 
+* Run a playbook that uses the modules and plugins in your collection. Verify that new features and functionality work as expected. For examples and more details see :ref:`Using collections <using_collections>`.
 * Check the documentation for typos.
 * Check that the version number of your tarball is higher than the latest published version on the distribution server or servers.
 * If you find any issues, fix them and rebuild the collection tarball.
@@ -397,6 +405,6 @@ See the `Galaxy documentation <https://ansible.readthedocs.io/projects/galaxy-ng
    :ref:`collections`
        Learn how to install and use collections.
    :ref:`collections_galaxy_meta`
-       Table of fields used in the :file:`galaxy.yml` file 
+       Table of fields used in the :file:`galaxy.yml` file
    :ref:`Communication<communication>`
        Got questions? Need help? Want to share your ideas? Visit the Ansible communication guide

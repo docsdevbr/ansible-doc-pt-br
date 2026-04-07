@@ -1,3 +1,11 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-or-later
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-or-later.txt
+
 
 .. _releasing_collections:
 .. _Releasing:
@@ -29,8 +37,8 @@ To prepare for a release, a collection must have:
 
 See :ref:`including_collection_ansible` if you plan on adding a new collection to the Ansible package.
 
-.. note:: 
-  
+.. note::
+
   Your collection must pass ``ansible-test sanity`` tests. See :ref:`testing_collections` for details.
 
 

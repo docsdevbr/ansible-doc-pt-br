@@ -1,3 +1,11 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-or-later
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-or-later.txt
+
 .. _collections_installing:
 
 Installing collections
@@ -83,22 +91,22 @@ If a collection has been signed by a :term:`distribution server`, the server wil
 To use signature verification for signed collections:
 
 1. :ref:`Configured a GnuPG keyring <galaxy_gpg_keyring>` for ``ansible-galaxy``, or provide the path to the keyring with the ``--keyring`` option when you install the signed collection.
-   
+
 
 2. Import the public key from the distribution server into that keyring.
-   
+
    .. code-block:: bash
 
      gpg --import --no-default-keyring --keyring ~/.ansible/pubring.kbx my-public-key.asc
 
 
 3. Verify the signature when you install the collection.
-   
+
    .. code-block:: bash
 
      ansible-galaxy collection install my_namespace.my_collection --keyring ~/.ansible/pubring.kbx
 
-   The ``--keyring`` option is not necessary if you have :ref:`configured a GnuPG keyring <galaxy_gpg_keyring>`. 
+   The ``--keyring`` option is not necessary if you have :ref:`configured a GnuPG keyring <galaxy_gpg_keyring>`.
 
 4. Optionally, verify the signature at any point after installation to prove the collection has not been tampered with. See :ref:`verify_signed_collections` for details.
 
@@ -218,7 +226,7 @@ Configuring the ``ansible-galaxy`` client
 Removing a collection
 =====================
 
-If you no longer need a collection, simply remove the installation directory from your filesystem. 
+If you no longer need a collection, simply remove the installation directory from your filesystem.
 The path can be different depending on your operating system:
 
 .. code-block:: bash

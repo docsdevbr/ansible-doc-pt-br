@@ -1,3 +1,11 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-or-later
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-or-later.txt
+
 .. _playbooks_reuse_roles:
 
 *****
@@ -40,7 +48,7 @@ By default, Ansible will look in most role directories for a ``main.yml`` file f
    - On stand alone roles you can also include custom modules and/or plugins, for example ``library/my_module.py``, which may be used within this role (see :ref:`embedding_modules_and_plugins_in_roles` for more information).
    - A 'stand alone' role refers to role that is not part of a collection but as individually installable content.
    - Variables from ``vars/`` and ``defaults/`` are imported into play scope unless you disable it via the ``public`` option in ``import_role``/``include_role``.
-   
+
 You can add other YAML files in some directories, but they won't be used by default. They can be included/imported directly or specified when using ``include_role/import_role``.
 For example, you can place platform-specific tasks in separate files and refer to them in the ``tasks/main.yml`` file:
 

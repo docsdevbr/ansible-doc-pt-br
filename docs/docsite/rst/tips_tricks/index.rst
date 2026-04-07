@@ -1,3 +1,11 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-or-later
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-or-later.txt
+
 .. _tips_tricks_index:
 .. _playbooks_best_practices:
 
@@ -18,6 +26,6 @@ Ultimately, though, you should use Ansible in the way that makes the most sense 
 
 .. toctree::
    :maxdepth: 2
-   
+
    ansible_tips_tricks
    sample_setup

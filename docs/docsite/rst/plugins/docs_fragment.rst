@@ -1,3 +1,11 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-or-later
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-or-later.txt
+
 .. _docs_fragment_plugins:
 
 Docs fragments
@@ -7,7 +15,7 @@ Docs fragments
    :local:
    :depth: 2
 
-Docs fragments allow you to document common parameters of multiple plugins or modules in a single place. 
+Docs fragments allow you to document common parameters of multiple plugins or modules in a single place.
 
 .. _enabling_docs_fragments:
 
