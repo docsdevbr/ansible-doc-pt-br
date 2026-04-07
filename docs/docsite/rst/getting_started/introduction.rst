@@ -6,7 +6,7 @@
   https://github.com/ansible/ansible-documentation/blob/-/COPYING
 
   source_url: https://github.com/ansible/ansible-documentation/blob/devel/docs/docsite/rst/getting_started/introduction.rst
-  revision: aad8488440321ef5722f6a8d2b6a15f7179bf7fb
+  revision: 6145f3dfc10d91bdc138c8d5209a875beb22d736
   status: ready
 
 .. _introduction_to_ansible:
