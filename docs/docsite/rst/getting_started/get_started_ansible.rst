@@ -30,9 +30,9 @@ inventário e criando um playbook "Olá, Mundo!".
 
      mkdir ansible_quickstart && cd ansible_quickstart
 
-  Usar uma estrutura de diretórios única facilita a adição ao controle de
-  versão, bem como a reutilização e o compartilhamento de conteúdo de
-  automação.
+   Usar uma estrutura de diretórios única facilita a adição ao controle de
+   versão, bem como a reutilização e o compartilhamento de conteúdo de
+   automação.
 
 Continue seus primeiros passos com o Ansible
 :ref:`construindo um inventário<get_started_inventory>`.
