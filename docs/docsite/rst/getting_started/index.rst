@@ -1,10 +1,10 @@
 ..
   SPDX-FileCopyrightText: The Ansible project contributors.
 
-  SPDX-License-Identifier: GPL-3.0
+  SPDX-License-Identifier: GPL-3.0-only
   Documentation licensed under the GNU General Public License Version 3.
   The original work was translated from English into Brazilian Portuguese.
-  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0.txt
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-only.txt
 
   source_url: https://github.com/ansible/ansible-documentation/blob/devel/docs/docsite/rst/getting_started/index.rst
   revision: bd2ce70a0f3c74a6ee06a9e41e168fc0a03d2ff8

@@ -54,7 +54,7 @@ A obra original foi traduzida do inglês para o português brasileiro.
 
 [github-sponsors]: https://github.com/sponsors/docsdevbr
 
-[license]: LICENSES/GPL-3.0.txt
+[license]: LICENSES/GPL-3.0-only.txt
 
 [page]: https://pt.docs.dev.br/tech/a/ansible/index.html
 
