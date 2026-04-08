@@ -1,5 +1,5 @@
 ..
-  Copyright (c) The Ansible project contributors.
+  SPDX-FileCopyrightText: The Ansible project contributors.
 
   SPDX-License-Identifier: GPL-3.0-only
   Documentation licensed under the GNU General Public License Version 3.
