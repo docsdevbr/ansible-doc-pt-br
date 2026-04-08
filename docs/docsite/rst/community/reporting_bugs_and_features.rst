@@ -1,3 +1,11 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-only
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-only.txt
+
 
 .. _reporting_bugs_and_features:
 
@@ -27,25 +35,25 @@ Also, use the :ref:`Ansible Forum<ansible_forum>` to discuss whether the problem
 
 You need a free GitHub account to `report bugs <https://github.com/ansible/ansible/issues>`_ that affect:
 
-- multiple plugins  
-- a plugin that remained in the ansible/ansible repo  
-- the overall functioning of Ansible  
+- multiple plugins
+- a plugin that remained in the ansible/ansible repo
+- the overall functioning of Ansible
 
 How to write a good bug report
 ------------------------------
 
-If you find a bug, open an issue using the `issue template <https://github.com/ansible/ansible/issues/new?assignees=&labels=&template=bug_report.yml>`_. 
+If you find a bug, open an issue using the `issue template <https://github.com/ansible/ansible/issues/new?assignees=&labels=&template=bug_report.yml>`_.
 
 Fill out the issue template as completely and as accurately as possible. Include:
 
 * your Ansible version
 * the expected behavior and what you've tried, including the exact commands you were using or tasks you are running.
 * the current behavior and why you think it is a bug
-* the steps to reproduce the bug 
+* the steps to reproduce the bug
 * a minimal reproducible example and comments describing examples
 * any relevant configurations and the components you used
 * any relevant output plus ``ansible -vvvv`` (debugging) output
-* add the output of ``ansible-test-env --show`` when filing bug reports involving ``ansible-test``. 
+* add the output of ``ansible-test-env --show`` when filing bug reports involving ``ansible-test``.
 
 When sharing YAML in playbooks, ensure that you preserve formatting using `code blocks  <https://help.github.com/articles/creating-and-highlighting-code-blocks/>`_. For multiple-file content, use gist.github.com, more durable than Pastebin content.
 

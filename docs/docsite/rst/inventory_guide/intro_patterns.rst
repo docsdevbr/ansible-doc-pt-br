@@ -1,3 +1,11 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-only
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-only.txt
+
 .. _intro_patterns:
 
 Patterns: targeting hosts and groups
@@ -122,7 +130,7 @@ you must use the alias in your pattern. In the example above, you must use ``hos
 .. code-block:: console
 
    [WARNING]: Could not match supplied host pattern, ignoring: 127.0.0.2
-   
+
 Pattern processing order
 ------------------------
 

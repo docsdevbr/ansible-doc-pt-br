@@ -1,3 +1,11 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-only
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-only.txt
+
 .. _developing_modules_documenting:
 .. _module_documenting:
 
@@ -21,7 +29,7 @@ Every Ansible module written in Python must begin with seven standard sections i
 
 If you are curious why ``imports`` are not located at the top of the file, see the :ref:`python_imports` section.
 
-If you see any discrepancies in older Ansible modules, please open a pull request with modifications that satisfy these guidelines. 
+If you see any discrepancies in older Ansible modules, please open a pull request with modifications that satisfy these guidelines.
 
 Non-Python modules documentation
 ================================

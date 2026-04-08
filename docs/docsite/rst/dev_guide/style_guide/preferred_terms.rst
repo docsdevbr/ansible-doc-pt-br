@@ -1,3 +1,11 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-only
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-only.txt
+
 .. _preferred_terms:
 
 Preferred terminology
@@ -42,7 +50,7 @@ The following is the list of preferred terms for Ansible ecosystem projects.
    Ansible Navigator
       Use first occurrence. Subsequent occurrences can be Navigator or ``ansible-navigator`` if referring to the CLI.
 
-   Ansible playbook 
+   Ansible playbook
       Use on first occurrence. Subsequent occurrences can be playbook.
 
    `ansible-pylibssh`
@@ -61,7 +69,7 @@ The following is the list of preferred terms for Ansible ecosystem projects.
       Use on first occurrence or ``ansible-runner`` if referring to the CLI command. Subsequent occurrences can be Runner.
 
    Ansible SDK
-      Use on all occurrences. 
+      Use on all occurrences.
 
    Ansible Sign
       Use on all occurrences or ``ansible-sign`` if referring to the CLI command.

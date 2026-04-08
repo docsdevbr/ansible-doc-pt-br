@@ -1,11 +1,19 @@
 ..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-only
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-only.txt
+
+..
    THIS DOCUMENT IS OWNED BY THE ANSIBLE COMMUNITY STEERING COMMITTEE. ALL CHANGES MUST BE APPROVED BY THE STEERING COMMITTEE!
    For small changes (fixing typos, language errors, etc.) create a PR and ping @ansible/steering-committee.
    For other changes, create a `community topic <https://forum.ansible.com/new-topic?category=project&tags=community-wg>`_ to discuss them.
    (Creating a draft PR for this file and mentioning it in the community topic is also OK.)
 
 .. _steering_responsibilities:
- 
+
 Steering Committee mission and responsibilities
 ===============================================
 
@@ -176,7 +184,7 @@ When reviewing community collection `inclusion requests <https://github.com/ansi
 Collection exclusion workflow
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The Committee uses the :ref:`removal_from_ansible` to remove collections not satisfying the :ref:`collections_requirements` from the Ansible package. 
+The Committee uses the :ref:`removal_from_ansible` to remove collections not satisfying the :ref:`collections_requirements` from the Ansible package.
 
 .. _community_wg_meetings:
 

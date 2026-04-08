@@ -1,3 +1,11 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-only
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-only.txt
+
 .. _developing_plugins:
 .. _plugin_guidelines:
 
@@ -85,7 +93,7 @@ The supported configuration fields are:
   The last set environment variable in the list takes precedence if multiple are set.
   This is commonly used for plugins (especially inventory plugins) to allow configuration through environment variables.
   Examples: ``VMWARE_PORT``, ``GRAFANA_PASSWORD``
-  
+
 
 **ini**
   List of configuration file settings that can be used to set this option.
@@ -94,7 +102,7 @@ The supported configuration fields are:
   The last set configuration setting in the list takes precedence if multiple are set.
   This allows plugins to be configured with ansible.cfg.
   Example: ``grafana_password``
-  
+
 
 **vars**
   List of Ansible variables that can be used to set this option.
@@ -124,10 +132,10 @@ General precedence rules
 Accessing configuration settings
 --------------------------------
 
-To access the configuration settings in your plugin, use ``self.get_option(<option_name>)``. 
+To access the configuration settings in your plugin, use ``self.get_option(<option_name>)``.
 Some plugin types handle this differently:
 
-* Become, callback, connection and shell plugins are guaranteed to have the engine call ``set_options()``. 
+* Become, callback, connection and shell plugins are guaranteed to have the engine call ``set_options()``.
 * Lookup plugins always require you to handle it in the ``run()`` method.
 * Inventory plugins are done automatically if you use the ``base _read_config_file()`` method. If not, you must use ``self.get_option(<option_name>)``.
 * Cache plugins do it on load.

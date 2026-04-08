@@ -1,3 +1,11 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-only
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-only.txt
+
 
 .. _porting_2.14_guide_core:
 
@@ -62,7 +70,7 @@ Playbook
 Command Line
 ============
 
-* Python 3.9 on the controller node is a hard requirement for this release. 
+* Python 3.9 on the controller node is a hard requirement for this release.
 * At startup the filesystem encoding and locale are checked to verify they are UTF-8. If not, the process exits with an error reporting the errant encoding. If you were previously using the ``C`` or ``POSIX`` locale, you may be able to use ``C.UTF-8``. If you were previously using a locale such as ``en_US.ISO-8859-1``, you may be able to use ``en_US.UTF-8``. For simplicity it may be easiest to export the appropriate locale using the ``LC_ALL`` environment variable. An alternative to modifying your system locale is to run Python in UTF-8 mode; See the `Python documentation <https://docs.python.org/3/using/cmdline.html#envvar-PYTHONUTF8>`_ for more information.
 
 

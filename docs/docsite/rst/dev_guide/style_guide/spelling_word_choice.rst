@@ -1,3 +1,11 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-only
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-only.txt
+
 Spelling - Word Usage - Common Words and Phrases to Use and Avoid
 -----------------------------------------------------------------
 
@@ -61,7 +69,7 @@ Use "can" to describe actions or conditions that are possible. Use "may" only to
 
 CD or cd
 ^^^^^^^^
-When referring to a compact disk, use CD, such as "Insert the CD into the CD-ROM drive." When referring to the change directory command, use cd. 
+When referring to a compact disk, use CD, such as "Insert the CD into the CD-ROM drive." When referring to the change directory command, use cd.
 
 CD-ROM
 ^^^^^^
@@ -299,7 +307,7 @@ Correct. Do not use "web page" or "Web page."
 Web server
 ^^^^^^^^^^
 Correct. Do not use "webserver". For example, "The Apache HTTP Server is the default Web server..."
- 
+
 Website
 ^^^^^^^
 Correct. Do not use "web site" or "Web site." For example, "The Ansible website contains ..."

@@ -1,3 +1,11 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-only
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-only.txt
+
 .. _collection_release_with_branches:
 
 Releasing collections with release branches
@@ -220,8 +228,8 @@ Publishing the collection
   #. If the next version will be a new major version, create a pull request where you update the version in ``galaxy.yml`` to ``(X+1).0.0``. Note that the sanity tests will most likely fail since there will be deprecations with removal scheduled for ``(X+1).0.0``, which are flagged by the tests.
 
   For every such deprecation, decide:
-  
-  * Whether to remove them now. For example, you remove the complete ``modules/plugins`` or you remove redirects. 
+
+  * Whether to remove them now. For example, you remove the complete ``modules/plugins`` or you remove redirects.
   * Whether to add ignore entries to the corresponding ``tests/sanity/ignore-*.txt`` file and create issues, for example for removed features in ``modules/plugins``.
 
   Once the CI tests pass, merge the pull request. Make sure that this pull request is merged not too much later after the release

@@ -1,8 +1,16 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-only
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-only.txt
+
 # [ansible-doc-pt-br][page]
 
 [![README file in English][badge-readme-en]][readme-en]
 [![README file in Brazilian Portuguese][badge-readme-pt-br]][readme-pt-br]
-[![License: GPL-3.0][badge-license]][license]
+[![License: GPL-3.0-only][badge-license]][license]
 [![Contributors][badge-contributors]][contributors]
 [![GitHub Sponsors][badge-github-sponsors]][github-sponsors]
 
@@ -51,7 +59,7 @@ The original work was translated from English into Brazilian Portuguese.
 
 [github-sponsors]: https://github.com/sponsors/docsdevbr
 
-[license]: LICENSE
+[license]: LICENSES/GPL-3.0-only.txt
 
 [page]: https://pt.docs.dev.br/tech/a/ansible/index.html
 

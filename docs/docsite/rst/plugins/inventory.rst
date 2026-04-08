@@ -1,3 +1,11 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-only
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-only.txt
+
 .. _inventory_plugins:
 
 Inventory plugins
@@ -56,7 +64,7 @@ To start using an inventory plugin with a YAML configuration source, create a fi
 
 .. note:: Inventory plugins have required name patterns to which they must conform, for example:
 
-  An inventory that includes the ``kubevirt.core.kubevirt`` inventory plugin must use the ``*.kubevirt.yml`` filename pattern. 
+  An inventory that includes the ``kubevirt.core.kubevirt`` inventory plugin must use the ``*.kubevirt.yml`` filename pattern.
   An inventory that includes the ``servicenow.servicenow.now`` inventory plugin must use the ``*.servicenow.yml`` filename pattern.
 
 

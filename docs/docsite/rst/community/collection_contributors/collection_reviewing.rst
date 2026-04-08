@@ -1,3 +1,11 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-only
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-only.txt
+
 .. _review_checklist:
 
 Review checklist for collection PRs
@@ -38,7 +46,7 @@ Other standards to check for in a PR include:
   * New modules and plugins (that are not jinja2 filter and test plugins) do not need changelog fragments.
   * For jinja2 filter and test plugins, check out the `special syntax for changelog fragments <https://github.com/ansible-community/antsibull-changelog/blob/main/docs/changelogs.rst#adding-new-roles-playbooks-test-and-filter-plugins>`_.
   * The changelog content contains useful information for end users of the collection.
-  
+
 *  If new files are added with the pull request, they follow the :ref:`coll_licensing_req`.
 *  The changes follow the :ref:`Ansible documentation standards <developing_modules_documenting>` and the :ref:`style_guide`.
 *  The changes follow the :ref:`Development conventions <developing_modules_best_practices>`.

@@ -1,3 +1,11 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-only
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-only.txt
+
 .. _developing_python_3:
 
 ********************
@@ -365,7 +373,7 @@ is compatible with Python 2.6.
 
 .. seealso::
     Python documentation on format strings:
-    
+
     - `format strings in 2.6 <https://docs.python.org/2.6/library/string.html#formatstrings>`_
     - `format strings in 3.x <https://docs.python.org/3/library/string.html#formatstrings>`_
 

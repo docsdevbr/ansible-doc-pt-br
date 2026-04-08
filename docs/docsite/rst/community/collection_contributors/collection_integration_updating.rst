@@ -1,3 +1,11 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-only
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-only.txt
+
 .. _collection_updating_integration_tests:
 
 Adding to an existing integration test
@@ -109,7 +117,7 @@ We will add the following code to the file.
   # We should also run the same tasks with check_mode: true. We omit it here for simplicity.
   - name: Test for new_option, create new user WITHOUT the attribute
     community.postgresql.postgresql_user:
-      name: test_user      
+      name: test_user
     register: result
 
   - name: Check the module returns what we expect

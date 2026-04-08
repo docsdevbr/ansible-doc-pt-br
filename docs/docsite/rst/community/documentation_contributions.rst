@@ -1,3 +1,11 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-only
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-only.txt
+
 .. _community_documentation_contributions:
 
 *****************************************
@@ -83,7 +91,7 @@ If you make multiple changes to the Ansible documentation, or add more than a li
 .. note::
 
 	The following sections apply to documentation sourced from the ``ansible/ansible-documentation`` repo and does not apply to documentation from an individual collection. See the collection README file for details on how to contribute to that collection. Collection developers can also lint their collection-level documentation. See :ref:`verify_collection_docs` for details.
-   
+
 
 Setting up your environment to build documentation locally
 ----------------------------------------------------------

@@ -1,3 +1,11 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-only
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-only.txt
+
 .. _playbooks_error_handling:
 
 ***************************
@@ -191,11 +199,11 @@ You can reference simple variables in conditionals to avoid repeating certain te
           - 'tmp.stderr != "mkdir: cannot create directory ‘" ~ log_path ~ "’: File exists"'
 
 .. note::
-   Notice the missing double curly braces ``{{ }}`` around the ``log_path`` variable in the ``changed_when`` statement. 
-   
+   Notice the missing double curly braces ``{{ }}`` around the ``log_path`` variable in the ``changed_when`` statement.
+
    Just like ``when`` these two conditionals do not require templating delimiters (``{{ }}``) because they are raw Jinja2 expressions.
 
-   If you still use them, ansible will raise a warning  that conditional statements should not include jinja2 templating delimiters.   
+   If you still use them, ansible will raise a warning  that conditional statements should not include jinja2 templating delimiters.
 
 See :ref:`controlling_what_defines_failure` for more conditional syntax examples.
 

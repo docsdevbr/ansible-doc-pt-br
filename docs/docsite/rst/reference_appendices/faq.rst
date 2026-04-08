@@ -1,3 +1,11 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-only
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-only.txt
+
 .. _ansible_faq:
 
 Frequently Asked Questions
@@ -671,8 +679,8 @@ This variant causes a syntax error because ``update()`` is a Python method for d
 
 * Example of correct syntax:
 
-.. code-block:: jinja    
-    
+.. code-block:: jinja
+
     item['update']
 
 
@@ -903,7 +911,7 @@ and backups, which most file based modules also support:
 How do I submit a change to the documentation?
 ++++++++++++++++++++++++++++++++++++++++++++++
 
-Documentation for Ansible is kept in the `ansible/ansible-documentation <https://github.com/ansible/ansible-documentation>`_ 
+Documentation for Ansible is kept in the `ansible/ansible-documentation <https://github.com/ansible/ansible-documentation>`_
 project Git repository. See :ref:`community_documentation_contributions` for details.
 
 .. _legacy_vs_builtin:

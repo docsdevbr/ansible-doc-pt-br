@@ -1,3 +1,11 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-only
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-only.txt
+
 .. _flow_modules:
 .. _developing_program_flow_modules:
 
@@ -413,7 +421,7 @@ _ansible_verbosity
 
 Type: ``int``
 
-You can use this argument to control the level (0 for none) of verbosity in logging. 
+You can use this argument to control the level (0 for none) of verbosity in logging.
 
 
 _ansible_selinux_special_fs

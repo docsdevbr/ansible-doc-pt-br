@@ -1,3 +1,11 @@
+..
+  Copyright (c) The Ansible project contributors.
+
+  SPDX-License-Identifier: GPL-3.0-only
+  Documentation licensed under the GNU General Public License Version 3.
+  The original work was translated from English into Brazilian Portuguese.
+  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-only.txt
+
 .. _developing_inventory:
 
 ****************************
@@ -128,7 +136,7 @@ This method is just to expedite the inventory process and avoid unnecessary pars
 parse method
 ^^^^^^^^^^^^
 
-This method does the bulk of the work in the plugin. 
+This method does the bulk of the work in the plugin.
 It takes the following parameters:
 
  * inventory: inventory object with existing data and the methods to add hosts/groups/variables to inventory
