@@ -1,16 +1,8 @@
-..
-  SPDX-FileCopyrightText: The Ansible project contributors.
-
-  SPDX-License-Identifier: GPL-3.0-only
-  Documentation licensed under the GNU General Public License Version 3.
-  The original work was translated from English into Brazilian Portuguese.
-  https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-only.txt
-
 # [ansible-doc-pt-br][page]
 
 [![README file in English][badge-readme-en]][readme-en]
 [![README file in Brazilian Portuguese][badge-readme-pt-br]][readme-pt-br]
-[![License: GPL-3.0-only][badge-license]][license]
+[![License: GPL-3.0][badge-license]][license]
 [![REUSE status][badge-reuse]][reuse]
 [![Contributors][badge-contributors]][contributors]
 [![GitHub Sponsors][badge-github-sponsors]][github-sponsors]
@@ -50,7 +42,7 @@ The original work was translated from English into Brazilian Portuguese.
 
 [badge-readme-en]: https://img.shields.io/badge/lang-en-blue
 
-[badge-readme-pt-br]: https://img.shields.io/badge/lang-pt--br-blue
+[badge-readme-pt-br]: https://img.shields.io/badge/lang-pt--br-dark--green
 
 [badge-reuse]: https://api.reuse.software/badge/github.com/docsdevbr/ansible-doc-pt-br
 
