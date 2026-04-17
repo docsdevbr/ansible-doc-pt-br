@@ -6,23 +6,36 @@
   The original work was translated from English into Brazilian Portuguese.
   https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-only.txt
 
+  source_url: https://github.com/ansible/ansible-documentation/blob/devel/docs/docsite/rst/getting_started/get_started_inventory.rst
+  revision: c95f2e09f67ffd4db957eda33e809fedfdad22ec
+  status: ready
+
 .. _get_started_inventory:
 
 *********************
-Building an inventory
+Criando um inventário
 *********************
 
-Inventories organize managed nodes in centralized files that provide Ansible with system information and network locations.
-Using an inventory file, Ansible can manage a large number of hosts with a single command.
+Os inventários organizam os nós gerenciados em arquivos centralizados que
+fornecem ao Ansible informações do sistema e locais de rede.
+Usando um arquivo de inventário, o Ansible pode gerenciar um grande número de
+hosts com um único comando.
 
-To complete the following steps, you will need the IP address or fully qualified domain name (FQDN) of at least one host system.
-For demonstration purposes, the host could be running locally in a container or a virtual machine.
-You must also ensure that your public SSH key is added to the ``authorized_keys`` file on each host.
+Para concluir as etapas a seguir, você precisará do endereço IP ou do nome de
+domínio totalmente qualificado (FQDN) de pelo menos um sistema host.
+Para fins de demonstração, o host pode estar sendo executado localmente em um
+contêiner ou em uma máquina virtual.
+Você também deve garantir que sua chave SSH pública seja adicionada ao arquivo
+``authorized_keys`` em cada host.
 
-Continue getting started with Ansible and build an inventory as follows:
+Continue com os primeiros passos com o Ansible e crie um inventário da seguinte
+forma:
 
-#. Create a file named ``inventory.ini`` in the ``ansible_quickstart`` directory that you created in the :ref:`preceding step<get_started_ansible>`.
-#. Add a new ``[myhosts]`` group to the ``inventory.ini`` file and specify the IP address or fully qualified domain name (FQDN) of each host system.
+#. Crie um arquivo chamado ``inventory.ini`` no diretório ``ansible_quickstart``
+   que você criou no :ref:`passo anterior<get_started_ansible>`.
+#. Adicione um novo grupo ``[myhosts]`` ao arquivo ``inventory.ini`` e
+   especifique o endereço IP ou o nome de domínio totalmente qualificado (FQDN)
+   de cada sistema host.
 
    .. code-block:: ini
 
@@ -31,80 +44,97 @@ Continue getting started with Ansible and build an inventory as follows:
       192.0.2.51
       192.0.2.52
 
-#. Verify your inventory.
+#. Verifique seu inventário.
 
    .. code-block:: bash
 
       ansible-inventory -i inventory.ini --list
 
-#. Ping the ``myhosts`` group in your inventory.
+#. Faça o ping no grupo ``myhosts`` no seu inventário.
 
    .. code-block:: bash
 
       ansible myhosts -m ping -i inventory.ini
 
    .. note::
-      Pass the ``-u`` option with the ``ansible`` command if the username is different on the control node and the managed node(s).
+      Passe a opção ``-u`` com o comando ``ansible`` se o nome de usuário for
+      diferente no nó de controle e nos nós gerenciados.
 
    .. literalinclude:: ansible_output/ping_inventory_output.txt
       :language: text
 
-Congratulations, you have successfully built an inventory.
-Continue getting started with Ansible by :ref:`creating a playbook<get_started_playbook>`.
+Parabéns, você criou um inventário com sucesso.
+Continue aprendendo com o Ansible :ref:`criando um playbook<get_started_playbook>`.
 
-Inventories in INI or YAML format
-=================================
+Inventários em formato INI ou YAML
+==================================
 
-You can create inventories in either ``INI`` files or in ``YAML``.
-In most cases, such as the example in the preceding steps, ``INI`` files are straightforward and easy to read for a small number of managed nodes.
+Você pode criar inventários em arquivos ``INI`` ou ``YAML``.
+Na maioria dos casos, como no exemplo das etapas anteriores, os arquivos ``INI``
+são simples e fáceis de ler para um pequeno número de nós gerenciados.
 
-Creating an inventory in ``YAML`` format becomes a sensible option as the number of managed nodes increases.
-For example, the following is an equivalent of the ``inventory.ini`` that declares unique names for managed nodes and uses the ``ansible_host`` field:
+Criar um inventário em formato ``YAML`` torna-se uma opção sensata à medida que
+o número de nós gerenciados aumenta.
+Por exemplo, o seguinte é um equivalente ao arquivo ``inventory.ini`` que
+declara nomes exclusivos para os nós gerenciados e usa o campo ``ansible_host``:
 
 .. literalinclude:: yaml/inventory_example_vms.yaml
       :language: yaml
 
-Tips for building inventories
-=============================
+Dicas para criar inventários
+============================
 
-* Ensure that group names are meaningful and unique. Group names are also case sensitive.
-* Avoid spaces, hyphens, and preceding numbers (use ``floor_19``, not ``19th_floor``) in group names.
-* Group hosts in your inventory logically according to their **What**, **Where**, and **When**.
+* Certifique-se de que os nomes dos grupos sejam significativos e únicos.
+  Os nomes dos grupos também diferenciam maiúsculas de minúsculas.
+* Evite espaços, hífens e números antes dos nomes dos grupos (use ``andar_19``,
+  não ``19_andar``) nos nomes dos grupos.
+* Agrupe os hosts em seu inventário logicamente de acordo com o **O quê**,
+  **Onde** e **Quando**.
 
-  What
-     Group hosts according to the topology, for example: db, web, leaf, spine.
-  Where
-     Group hosts by geographic location, for example: datacenter, region, floor, building.
-  When
-     Group hosts by stage, for example: development, test, staging, production.
+  O quê
+    Agrupe os hosts de acordo com a topologia, por exemplo: banco de dados, web,
+    leaf, spine.
 
-Use metagroups
+  Onde
+    Agrupe os hosts por localização geográfica, por exemplo: datacenter, região,
+    andar, prédio.
+
+  Quando
+    Agrupe os hosts por estágio, por exemplo: desenvolvimento, teste,
+    homologação, produção.
+
+Use metagrupos
 --------------
 
-Create a metagroup that organizes multiple groups in your inventory with the following syntax:
+Crie um metagrupo que organize vários grupos em seu inventário com a seguinte
+sintaxe:
 
 .. code-block:: yaml
 
    metagroupname:
      children:
 
-The following inventory illustrates a basic structure for a data center.
-This example inventory contains a ``network`` metagroup that includes all network devices and a ``datacenter`` metagroup that includes the ``network`` group and all webservers.
+O inventário a seguir ilustra uma estrutura básica para um centro de dados.
+Este exemplo de inventário contém um metagrupo ``network`` que inclui todos os
+dispositivos de rede e um metagrupo ``datacenter`` que inclui o grupo
+``network`` e todos os servidores web.
 
 .. literalinclude:: yaml/inventory_group_structure.yaml
    :language: yaml
 
-Create variables
-----------------
+Crie variáveis
+--------------
 
-Variables set values for managed nodes, such as the IP address, FQDN, operating system, and SSH user, so you do not need to pass them when running Ansible commands.
+As variáveis definem valores para nós gerenciados, como endereço IP, FQDN,
+sistema operacional e usuário SSH, para que você não precise especificá-los ao
+executar comandos Ansible.
 
-Variables can apply to specific hosts.
+As variáveis podem ser aplicadas a hosts específicos.
 
 .. literalinclude:: yaml/inventory_variables_host.yaml
    :language: yaml
 
-Variables can also apply to all hosts in a group.
+As variáveis também podem ser aplicadas a todos os hosts em um grupo.
 
 .. literalinclude:: yaml/inventory_variables_group.yaml
    :language: yaml
@@ -112,8 +142,9 @@ Variables can also apply to all hosts in a group.
 .. seealso::
 
    :ref:`intro_inventory`
-       Learn more about inventories in ``YAML`` or ``INI`` format.
+       Saiba mais sobre inventários nos formatos ``YAML`` ou ``INI``.
    :ref:`variables_in_inventory`
-       Find out more about inventory variables and their syntax.
+       Saiba mais sobre variáveis de inventário e sua sintaxe.
    :ref:`vault`
-       Find out how to encrypt sensitive content in your inventory such as passwords and keys.
+       Descubra como criptografar conteúdo sensível em seu inventário, como
+       senhas e chaves.
