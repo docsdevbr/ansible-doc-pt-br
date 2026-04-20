@@ -6,68 +6,83 @@
   The original work was translated from English into Brazilian Portuguese.
   https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-only.txt
 
+  source_url: https://github.com/ansible/ansible-documentation/blob/devel/docs/docsite/rst/getting_started/get_started_playbook.rst
+  revision: d0ee17ece91c6ecd61f3adfc573e3884e72df5ae
+  status: ready
+
 .. _get_started_playbook:
 
 *******************
-Creating a playbook
+Criando um playbook
 *******************
 
-Playbooks are automation blueprints, in ``YAML`` format, that Ansible uses to deploy and configure managed nodes.
+Playbooks são modelos de automação, em formato ``YAML``, que o Ansible usa para
+implantar e configurar nós gerenciados.
 
 Playbook
-   A list of plays that define the order in which Ansible performs operations, from top to bottom, to achieve an overall goal.
+  Uma lista de plays que define a ordem em que o Ansible executa operações, de
+  cima para baixo, para atingir um objetivo geral.
 
 Play
-   An ordered list of tasks that maps to managed nodes in an inventory.
+  Uma lista ordenada de tarefas que mapeia nós gerenciados em um inventário.
 
 Task
-   A reference to a single module that defines the operations that Ansible performs.
+  Uma referência a um único módulo que define as operações que o Ansible
+  executa.
 
-Module
-   A unit of code or binary that Ansible runs on managed nodes.
-   Ansible modules are grouped in collections with a :term:`Fully Qualified Collection Name (FQCN)` for each module.
+Módulo
+  Uma unidade de código ou binário que o Ansible executa em nós gerenciados.
+  Os módulos do Ansible são agrupados em coleções com um
+  :term:`Nome de Coleção Totalmente Qualificado (FQCN)` para cada módulo.
 
-Complete the following steps to create a playbook that pings your hosts and prints a "Hello world" message:
+Complete os seguintes passos para criar um playbook que envia pings para seus
+hosts e imprime uma mensagem "Hello world":
 
-#. Create a file named ``playbook.yaml`` in your ``ansible_quickstart`` directory, that you created earlier, with the following content:
+#. Crie um arquivo chamado ``playbook.yaml`` no diretório ``ansible_quickstart``
+   que você criou anteriormente, com o seguinte conteúdo:
 
    .. literalinclude:: yaml/first_playbook.yaml
       :language: yaml
 
-#. Run your playbook.
+#. Execute seu playbook.
 
    .. code-block:: bash
 
       ansible-playbook -i inventory.ini playbook.yaml
 
-Ansible returns the following output:
+O Ansible retorna a seguinte saída:
 
 .. literalinclude:: ansible_output/first_playbook_output.txt
       :language: text
 
-In this output you can see:
+Nesta saída, você pode ver:
 
-* The names that you give the play and each task.
-  You should always use descriptive names that make it easy to verify and troubleshoot playbooks.
+* Os nomes que você deu ao playbook e a cada tarefa.
+  Você deve sempre usar nomes descritivos que facilitem a verificação e a
+  solução de problemas dos playbooks.
 
-* The "Gathering Facts" task runs implicitly.
-  By default, Ansible gathers information about your inventory that it can use in the playbook.
+* A tarefa "Gathering Facts" é executada implicitamente.
+  Por padrão, o Ansible coleta informações sobre seu inventário que podem ser
+  usadas no playbook.
 
-* The status of each task.
-  Each task has a status of ``ok`` which means it ran successfully.
+* O status de cada tarefa.
+  Cada tarefa tem o status ``ok``, o que significa que foi executada com
+  sucesso.
 
-* The play recap that summarizes results of all tasks in the playbook per host.
-  In this example, there are three tasks so ``ok=3`` indicates that each task ran successfully.
+* O resumo da execução, que sintetiza os resultados de todas as tarefas do
+  playbook por host.
+  Neste exemplo, há três tarefas, então ``ok=3`` indica que cada tarefa foi
+  executada com sucesso.
 
-Congratulations, you have started using Ansible!
+Parabéns, você começou a usar o Ansible!
 
 .. seealso::
 
    :ref:`playbooks_intro`
-       Start building playbooks for real world scenarios.
+     Comece a criar playbooks para cenários do mundo real.
    :ref:`working_with_playbooks`
-       Go into more detail with Ansible playbooks.
+     Saiba mais sobre os playbooks do Ansible.
    :ref:`playbooks_best_practices`
-       Get tips and tricks for using playbooks.
+     Obtenha dicas e truques para usar playbooks.
    :ref:`vars_and_facts`
-       Learn more about the ``gather_facts`` keyword in playbooks.
+     Saiba mais sobre a palavra-chave ``gather_facts`` em playbooks.
