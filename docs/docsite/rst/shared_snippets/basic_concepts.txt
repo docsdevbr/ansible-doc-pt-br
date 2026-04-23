@@ -6,82 +6,127 @@
   The original work was translated from English into Brazilian Portuguese.
   https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-only.txt
 
-Control node
-============
-The machine from which you run the Ansible CLI tools (``ansible-playbook`` , ``ansible``, ``ansible-vault`` and others).
-You can use any computer that meets the software requirements as a control node - laptops, shared desktops, and servers can all run Ansible.
-You can also run Ansible in containers known as :ref:`Execution Environments<getting_started_ee_index>`.
+  source_url: https://github.com/ansible/ansible-documentation/blob/devel/docs/docsite/rst/shared_snippets/basic_concepts.txt
+  revision: 9f3e3f4b7c3b9335f5488bb6150c7397ba18e039
+  status: ready
 
-Multiple control nodes are possible, but Ansible itself does not coordinate across them, see ``AAP`` for such features.
+Nó de controle
+==============
 
+A máquina a partir da qual você executa as ferramentas CLI do Ansible
+(``ansible-playbook``, ``ansible``, ``ansible-vault`` e outras).
+Você pode usar qualquer computador que atenda aos requisitos de software como nó
+de controle — notebooks, desktops compartilhados e servidores podem executar o
+Ansible.
+Você também pode executar o Ansible em contêineres conhecidos como
+:ref:`Ambientes de execução<getting_started_ee_index>`.
 
-Managed nodes
-=============
-Also referred to as 'hosts', these are the target devices (servers, network appliances or any computer) you aim to manage with Ansible.
+É possível usar vários nós de controle, mas o Ansible em si não coordena entre
+eles; consulte ``AAP`` para obter informações sobre esses recursos.
 
-Ansible is not normally installed on managed nodes, unless you are using ``ansible-pull``, but this is rare and not the recommended setup.
+Nós gerenciados
+===============
 
+Também chamados de 'hosts', esses são os dispositivos de destino (servidores,
+dispositivos de rede ou qualquer computador) que você deseja gerenciar com o
+Ansible.
 
-Inventory
-=========
-A list of managed nodes provided by one or more 'inventory sources'. Your inventory can specify information specific to each node, like IP address.
-It is also used for assigning groups, that both allow for node selection in the Play and bulk variable assignment.
+O Ansible normalmente não é instalado em nós gerenciados, a menos que você
+esteja usando ``ansible-pull``, mas isso é raro e não é a configuração
+recomendada.
 
-To learn more about inventory, see :ref:`the Working with Inventory<intro_inventory>` section. Sometimes an inventory source file is also referred to as a 'hostfile'.
+Inventário
+==========
 
+Uma lista de nós gerenciados fornecida por uma ou mais 'fontes de inventário'.
+Seu inventário pode especificar informações específicas para cada nó, como
+endereço IP.
+Ele também é usado para atribuir grupos, que permitem a seleção de nós no play e
+a atribuição em massa de variáveis.
+
+Para saber mais sobre inventário, consulte a seção
+:ref:`Trabalhando com inventário<intro_inventory>`.
+Às vezes, um arquivo de origem de inventário também é chamado de
+'hostfile'.
 
 Playbooks
 =========
-They contain Plays (which are the basic unit of Ansible execution). This is both an 'execution concept' and how we describe the files on which ``ansible-playbook`` operates.
 
-Playbooks are written in YAML and are easy to read, write, share and understand. To learn more about playbooks, see :ref:`about_playbooks`.
+Eles contêm plays (que são a unidade básica de execução do Ansible).
+Este é um 'conceito de execução' e também como descrevemos os arquivos nos quais
+o ``ansible-playbook`` opera.
+
+Os playbooks são escritos em YAML e são fáceis de ler, escrever, compartilhar e
+entender.
+Para saber mais sobre playbooks, consulte :ref:`about_playbooks`.
 
 Plays
 -----
-The main context for Ansible execution, this playbook object maps managed nodes (hosts) to tasks.
-The Play contains variables, roles and an ordered lists of tasks and can be run repeatedly.
-It basically consists of an implicit loop over the mapped hosts and tasks and defines how to iterate over them.
 
-Roles
-.....
-A limited distribution of reusable Ansible content (tasks, handlers, variables, plugins, templates and files) for use inside of a Play.
+O contexto principal para a execução do Ansible, este objeto playbook mapeia nós
+gerenciados (hosts) para tarefas.
+O play contém variáveis, roles e uma lista ordenada de tarefas e pode ser
+executado repetidamente.
+Ele consiste basicamente em um loop implícito sobre os hosts e tarefas mapeados
+e define como iterar sobre eles.
 
-To use any Role resource, the Role itself must be imported into the Play.
+Roles (Funções)
+...............
 
-Tasks
-.....
-The definition of an 'action' to be applied to the managed host.
-You can execute a single task once with an ad hoc command using ``ansible`` or ``ansible-console`` (both create a virtual Play).
+Uma distribuição limitada de conteúdo Ansible reutilizável (tasks, handlers,
+variáveis, plugins, templates e arquivos) para uso em um play.
+
+Para usar qualquer recurso de role, a própria role deve ser importada para o
+play.
+
+Tasks (Tarefas)
+...............
+
+A definição de uma 'ação' a ser aplicada ao host gerenciado.
+Você pode executar uma única tarefa uma vez com um comando ad hoc usando
+``ansible`` ou ``ansible-console`` (ambos criam um play virtual).
 
 Handlers
 ........
-A special form of a Task, that only executes when notified by a previous task which resulted in a 'changed' status.
 
+Uma forma especial de tarefa, que só é executada quando notificada por uma
+tarefa anterior que resultou em um status 'changed'.
 
-Modules
+Módulos
 =======
-The code or binaries that Ansible copies to and executes on each managed node (when needed) to accomplish the action defined in each Task.
 
-Each module has a particular use, from administering users on a specific type of database to managing VLAN interfaces on a specific type of network device.
+O código ou binários que o Ansible copia e executa em cada nó gerenciado (quando
+necessário) para realizar a ação definida em cada tarefa.
 
-You can invoke a single module with a task, or invoke several different modules in a playbook.
-Ansible modules are grouped in collections. For an idea of how many collections Ansible includes, see the :ref:`list_of_collections`.
+Cada módulo tem um uso específico, desde administrar usuários em um tipo
+específico de banco de dados até gerenciar interfaces VLAN em um tipo específico
+de dispositivo de rede.
 
+Você pode invocar um único módulo com uma tarefa ou invocar vários módulos
+diferentes em um playbook.
+Os módulos do Ansible são agrupados em coleções.
+Para ter uma ideia de quantas coleções o Ansible inclui, consulte a
+:ref:`list_of_collections`.
 
 Plugins
 =======
-Pieces of code that expand Ansible's core capabilities.
-Plugins can control how you connect to a managed node (connection plugins),
-manipulate data (filter plugins) and even control what is displayed in the console (callback plugins).
 
-See :ref:`working_with_plugins` for details.
+Códigos que expandem as funcionalidades principais do Ansible.
+Os plugins podem controlar como você se conecta a um nó gerenciado (plugins de
+conexão), manipular dados (plugins de filtro) e até mesmo controlar o que é
+exibido no console (plugins de retorno de chamada).
 
+Consulte :ref:`working_with_plugins` para obter detalhes.
 
-Collections
-===========
-A format in which Ansible content is distributed that can contain playbooks, roles, modules, and plugins.
-You can install and use collections through `Ansible Galaxy <https://galaxy.ansible.com>`_.
+Coleções
+========
 
-To learn more about collections, see :ref:`collections`.
+Um formato no qual o conteúdo do Ansible é distribuído, que pode conter
+playbooks, roles, módulos e plugins.
+Você pode instalar e usar coleções por meio do
+`Ansible Galaxy <https://galaxy.ansible.com>`_.
 
-Collection resources can be used independently and discretely from each other.
+Para saber mais sobre coleções, consulte :ref:`collections`.
+
+Os recursos de coleção podem ser usados de forma independente e discreta uns dos
+outros.
