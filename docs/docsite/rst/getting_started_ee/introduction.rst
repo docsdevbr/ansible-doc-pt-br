@@ -91,4 +91,5 @@ pode usar com Ambientes de Execução, como:
 * `VS Code Ansible <https://marketplace.visualstudio.com/items?itemName=redhat.ansible>`_
 * `Extensões de contêineres de desenvolvimento <https://code.visualstudio.com/docs/devcontainers/containers>`_
 
-Quer começar a usar EEs? Consulte :ref:`setting_up_ee_environment`.
+Pronta para começar a usar EEs?
+Consulte :ref:`setting_up_ee_environment`.

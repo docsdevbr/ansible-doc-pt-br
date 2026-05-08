@@ -6,48 +6,58 @@
   The original work was translated from English into Brazilian Portuguese.
   https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-only.txt
 
+  source_url: https://github.com/ansible/ansible-documentation/blob/stable-2.20/docs/docsite/rst/getting_started_ee/setup_environment.rst
+  revision: 770c89ce55c64502b471f2e6ec34939de238ec8c
+  status: ready
+
 .. _setting_up_ee_environment:
 
-***************************
-Setting up your environment
-***************************
+*************************
+Configurando seu ambiente
+*************************
 
-Complete the following steps to set up a local environment for your first Execution Environment:
+Siga os passos abaixo para configurar um ambiente local para seu primeiro
+Execution Environment (EE, ou Ambiente de Execução):
 
-#. Ensure the following packages are installed on your system:
+#. Certifique-se de que os seguintes pacotes estejam instalados em seu sistema:
 
-    * ``podman`` or ``docker``
+    * ``podman`` ou ``docker``
     * ``python3``
     * ``python3-pip``
 
-    If you use the DNF package manager, install these prerequisites as follows:
+    Se você utiliza o gerenciador de pacotes DNF, instale os pré-requisitos da
+    seguinte forma:
 
     .. code-block:: bash
 
        sudo dnf install -y podman python3 python3-pip
 
-#. Install ``ansible-navigator``:
+#. Instale o ``ansible-navigator``:
 
     .. code-block:: bash
 
        pip3 install ansible-navigator
 
-    Installing ``ansible-navigator`` lets you run EEs on the command line.
-    It includes the ``ansible-builder`` package to build EEs.
+    A instalação do ``ansible-navigator`` permite executar EEs na linha de
+    comando.
+    Ele inclui o pacote ``ansible-builder`` para compilar EEs.
 
-    If you want to build EEs without testing, install only ``ansible-builder``:
+    Se você quiser compilar EEs sem realizar testes, instale apenas o
+    ``ansible-builder``:
 
     .. code-block:: bash
 
        pip3 install ansible-builder
 
-#. Verify your environment with the following commands:
+#. Verifique seu ambiente com os seguintes comandos:
 
     .. code-block:: bash
 
        ansible-navigator --version
        ansible-builder --version
 
-Ready to build an EE in a few easy steps? Proceed to :ref:`building_execution_environment`.
+Pronta para criar um EE em poucos passos?
+Acesse :ref:`building_execution_environment`.
 
-Want to try an EE without having to build one? Proceed to :ref:`running_community_execution_environment`.
+Quer experimentar um EE sem precisar criá-lo?
+Acesse :ref:`running_community_execution_environment`.

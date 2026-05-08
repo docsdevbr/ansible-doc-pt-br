@@ -48,4 +48,7 @@ Continue seus primeiros passos com o Ansible
   `Ansible Labs <https://www.ansible.com/products/ansible-training>`_
     Laboratórios para aprofundar o conhecimento sobre diferentes tópicos.
   :ref:`Guia de Comunicação Ansible<communication>`
-    Dúvidas? Ajuda? Ideias? Pergunte à comunidade.
+    Dúvidas?
+    Ajuda?
+    Ideias?
+    Pergunte à comunidade.
