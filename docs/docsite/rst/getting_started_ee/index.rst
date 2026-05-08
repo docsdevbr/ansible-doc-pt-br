@@ -6,34 +6,43 @@
   The original work was translated from English into Brazilian Portuguese.
   https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-only.txt
 
+  source_url: https://github.com/ansible/ansible-documentation/blob/stable-2.20/docs/docsite/rst/getting_started_ee/index.rst
+  revision: 2043e2efa0de69f39edee2829934ca141fd1f254
+  status: ready
+
 .. _getting_started_ee_index:
 
-*******************************************
-Getting started with Execution Environments
-*******************************************
+************************************
+Introdução aos Ambientes de Execução
+************************************
 
-You can run Ansible automation in containers, like any other modern software application.
-Ansible uses container images known as Execution Environments (EE) that act as control nodes.
-EEs remove complexity to scale out automation projects and make things like deployment operations much more straightforward.
+Você pode executar a automação do Ansible em contêineres, como qualquer outra
+aplicação de software moderno.
+O Ansible usa imagens de contêiner conhecidas como Execution Environments (EE,
+ou Ambientes de Execução) que atuam como nós de controle.
+Os EEs simplificam a escalabilidade de projetos de automação e tornam coisas
+como operações de implantação muito mais fáceis.
 
-An Execution Environment image contains the following packages as standard:
+Uma imagem de Ambiente de Execução contém os seguintes pacotes por padrão:
 
 * ``ansible-core``
 * ``ansible-runner``
 * Python
-* Ansible content dependencies
+* Dependências de conteúdo do Ansible
 
-In addition to the standard packages, an EE can also contain:
+Além dos pacotes padrão, um EE também pode conter:
 
-* one or more Ansible collections and their dependencies
-* other custom components
+* uma ou mais coleções do Ansible e suas dependências
+* outros componentes personalizados
 
-This getting started guide shows you how to build and test a simple Execution Environment.
-The resulting container image represents an Ansible control node that contains:
+Este guia de introdução mostra como criar e testar um Ambiente de Execução
+simples.
+A imagem do contêiner resultante representa um nó de controle do Ansible que
+contém:
 
-* standard EE packages
-* ``community.postgresql`` collection
-* ``psycopg2-binary`` Python package
+* pacotes padrão do EE
+* a coleção ``community.postgresql``
+* o pacote Python ``psycopg2-binary``
 
 .. toctree::
    :maxdepth: 1
