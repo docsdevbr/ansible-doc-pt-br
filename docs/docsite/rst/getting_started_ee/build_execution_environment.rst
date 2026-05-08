@@ -6,42 +6,55 @@
   The original work was translated from English into Brazilian Portuguese.
   https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-only.txt
 
+  source_url: https://github.com/ansible/ansible-documentation/blob/stable-2.20/docs/docsite/rst/getting_started_ee/build_execution_environment.rst
+  revision: f109b783e5704abbdfb52d4e024e5ff45697b19b
+  status: ready
+
 .. _building_execution_environment:
 
 *****************************************
-Building your first Execution Environment
+Criando seu primeiro Ambiente de Execução
 *****************************************
 
-We are going to build an EE that represents an Ansible control node containing standard packages such as ``ansible-core`` and Python in addition to an Ansible collection (``community.postgresql``) and its dependency (the ``psycopg2-binary`` Python connector).
+Vamos criar um EE (Execution Environment, ou Ambiente de Execução) que
+representa um nó de controle do Ansible contendo pacotes padrão como
+``ansible-core`` e Python, além de uma coleção do Ansible
+(``community.postgresql``) e sua dependência (o conector Python
+``psycopg2-binary``).
 
-To build your first EE:
+Para criar seu primeiro EE:
 
-#. Create a project folder on your filesystem.
+#. Crie uma pasta de projeto em seu sistema de arquivos.
 
    .. code-block:: bash
 
       mkdir my_first_ee && cd my_first_ee
 
-#. Create a ``execution-environment.yml`` file that specifies dependencies to include in the image.
+#. Crie um arquivo ``execution-environment.yml`` que especifica as dependências
+   a serem incluídas na imagem.
 
    .. literalinclude:: yaml/execution-environment.yml
       :language: yaml
 
    .. note::
 
-      The `psycopg2-binary` Python package is included in the `requirements.txt` file for the collection.
-      For collections that do not include `requirements.txt` files, you need to specify Python dependencies explicitly.
-      See the `Ansible Builder documentation <https://ansible-builder.readthedocs.io/en/stable/definition/>`_ for details.
+      O pacote Python `psycopg2-binary` está incluído no arquivo
+      `requirements.txt` da coleção.
+      Para coleções que não incluem arquivos `requirements.txt`, você precisa
+      especificar as dependências do Python explicitamente.
+      Consulte a
+      `documentação do Ansible Builder <https://ansible-builder.readthedocs.io/en/stable/definition/>`_
+      para obter detalhes.
 
-#. Build a EE container image called ``postgresql_ee``.
+#. Crie uma imagem de contêiner EE chamada ``postgresql_ee``.
 
-   If you use docker, add the ``--container-runtime docker`` argument.
+   Se você usar o Docker, adicione o argumento ``--container-runtime docker``.
 
    .. code-block:: bash
 
       ansible-builder build --tag postgresql_ee
 
-#. List container images to verify that you built it successfully.
+#. Liste as imagens de contêiner para verificar se você a construiu com sucesso.
 
    .. code-block:: bash
 
@@ -49,19 +62,24 @@ To build your first EE:
 
       localhost/postgresql_ee          latest      2e866777269b  6 minutes ago  1.11 GB
 
-You can verify the image you created by inspecting the ``Containerfile`` or ``Dockerfile`` in the ``context`` directory to view its configuration.
+Você pode verificar a imagem que criou inspecionando o arquivo ``Containerfile``
+ou ``Dockerfile`` no diretório ``context`` para visualizar sua configuração.
 
 .. code-block:: bash
 
    less context/Containerfile
 
-You can also use Ansible Navigator to view detailed information about the image.
+Você também pode usar o Ansible Navigator para visualizar informações detalhadas
+sobre a imagem.
 
-Run the `ansible-navigator` command, type ``:images`` in the TUI, and then choose ``postgresql_ee``.
+Execute o comando `ansible-navigator`, digite ``:images`` na interface de texto
+e selecione ``postgresql_ee``.
 
-Proceed to :ref:`running_custom_execution_environment` and test the EE you just built.
+Prossiga para :ref:`running_custom_execution_environment` e teste o EE que você
+acabou de criar.
 
 .. seealso::
 
-   `Running a local container registry for Execution Environments <https://forum.ansible.com/t/running-a-local-container-registry-for-execution-environments/206>`_
-      This guide in the Ansible community forum explains how to set up a local registry for your Execution Environment images.
+   `Executando um registro de contêineres local para Ambientes de Execução <https://forum.ansible.com/t/running-a-local-container-registry-for-execution-environments/206>`_
+      Este guia no fórum da comunidade Ansible explica como configurar um
+      registro local para suas imagens de Ambiente de Execução.
