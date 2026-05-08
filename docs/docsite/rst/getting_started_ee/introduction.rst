@@ -6,68 +6,89 @@
   The original work was translated from English into Brazilian Portuguese.
   https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-only.txt
 
+  source_url: https://github.com/ansible/ansible-documentation/blob/stable-2.20/docs/docsite/rst/getting_started_ee/introduction.rst
+  revision: 2043e2efa0de69f39edee2829934ca141fd1f254
+  status: ready
+
 .. _introduction_execution_environment:
 
-**************************************
-Introduction to Execution Environments
-**************************************
+************************************
+Introdução aos Ambientes de Execução
+************************************
 
-Ansible Execution Environments aim to resolve complexity issues and provide all the benefits you can get from containerization.
+Os Execution Environments (EE, ou Ambientes de Execução) do Ansible visam
+resolver problemas de complexidade e proporcionar todos os benefícios que você
+pode obter com a conteinerização.
 
-Reducing complexity
-===================
+Reduzindo a complexidade
+========================
 
-There are three main areas where EEs can reduce complexity:
+Existem três áreas principais onde os EEs podem reduzir a complexidade:
 
-* software dependencies
-* portability
-* content separation
+* dependências de software
+* portabilidade
+* separação de conteúdo
 
-Dependencies
+Dependências
 ------------
 
-Software applications typically have dependencies, and Ansible is no exception.
-These dependencies can include software libraries, configuration files or other services, to name a few.
+As aplicações de software normalmente têm dependências, e o Ansible não é
+exceção.
+Essas dependências podem incluir bibliotecas de software, arquivos de
+configuração ou outros serviços, entre outros.
 
-Traditionally, administrators install application dependencies on top of an operating system using packaging management tools such as RPM or Python-pip.
-The major drawback of such an approach is that an application might require versions of dependencies different from those provided by default.
-For Ansible, a typical installation consists of `ansible-core` and a set of Ansible collections.
-Many of them have dependencies for the plugins, modules, roles and playbooks they provide.
+Tradicionalmente, as pessoas administradoras instalam as dependências da
+aplicação no sistema operacional usando ferramentas de gerenciamento de pacotes,
+como RPM ou Python-pip.
+A principal desvantagem dessa abordagem é que uma aplicação pode exigir versões
+de dependências diferentes das fornecidas por padrão.
+Para o Ansible, uma instalação típica consiste no `ansible-core` e um conjunto
+de coleções do Ansible.
+Muitas delas têm dependências para os plugins, módulos, funções e playbooks que
+fornecem.
 
-The Ansible collections can depend on the following pieces of software and their versions:
+As coleções do Ansible podem depender dos seguintes softwares e suas versões:
 
 * ``ansible-core``
 * Python
-* Python packages
-* System packages
-* Other Ansible collections
+* Pacotes Python
+* Pacotes do sistema
+* Outras coleções do Ansible
 
-The dependencies have to be installed and sometimes can conflict with each other.
+As dependências precisam ser instaladas e, às vezes, podem entrar em conflito
+entre si.
 
-One way to **partially** resolve the dependency issue is to use Python virtual environments on Ansible control nodes.
-However, applied to Ansible, virtual environments have drawbacks and natural limitations.
+Uma maneira de resolver **parcialmente** o problema de dependência é usar
+ambientes virtuais Python nos nós de controle do Ansible.
+No entanto, quando aplicados ao Ansible, os ambientes virtuais têm desvantagens
+e limitações inerentes.
 
-Portability
------------
+Portabilidade
+-------------
 
-An Ansible user writes content for Ansible locally and wants to leverage the container technology to make their automation runtimes portable, shareable and easily deployable to testing and production environments.
+Uma pessoa usuária do Ansible escreve conteúdo para o Ansible localmente e
+deseja aproveitar a tecnologia de contêineres para tornar seus ambientes de
+automação portáteis, compartilháveis e facilmente implantáveis em ambientes de
+teste e produção.
 
-Content separation
-------------------
+Separação de conteúdo
+---------------------
 
-In situations when there is an Ansible control node or a tool such as Ansible AWX/Controller used by several users, they might want separate
-their content to avoid configuration and dependency conflicts.
+Em situações em que um nó de controle Ansible ou uma ferramenta como o Ansible
+AWX/Controller é utilizada por várias pessoas usuárias, elas podem querer
+separar seu conteúdo para evitar conflitos de configuração e dependência.
 
-Ansible tooling for EEs
-=======================
+Ferramentas Ansible para EEs
+============================
 
-Projects in the Ansible ecosystem also provide several tools that you can use with EEs, such as:
+Projetos no ecossistema Ansible também fornecem diversas ferramentas que você
+pode usar com Ambientes de Execução, como:
 
 * `Ansible Builder <https://ansible-builder.readthedocs.io/en/stable/>`_
 * `Ansible Navigator <https://ansible-navigator.readthedocs.io/>`_
 * `Ansible AWX <https://ansible.readthedocs.io/projects/awx/en/latest/userguide/execution_environments.html#use-an-execution-environment-in-jobs>`_
 * `Ansible Runner <https://ansible-runner.readthedocs.io/en/stable/>`_
 * `VS Code Ansible <https://marketplace.visualstudio.com/items?itemName=redhat.ansible>`_
-* `Dev Containers extensions <https://code.visualstudio.com/docs/devcontainers/containers>`_
+* `Extensões de contêineres de desenvolvimento <https://code.visualstudio.com/docs/devcontainers/containers>`_
 
-Ready to get started with EEs? Proceed to :ref:`setting_up_ee_environment`.
+Quer começar a usar EEs? Consulte :ref:`setting_up_ee_environment`.
