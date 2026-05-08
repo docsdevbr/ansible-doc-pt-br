@@ -12,9 +12,9 @@
 
 .. _getting_started_ee_index:
 
-************************************
-Introdução aos Ambientes de Execução
-************************************
+**************************************
+Começando com os Ambientes de Execução
+**************************************
 
 Você pode executar a automação do Ansible em contêineres, como qualquer outra
 aplicação de software moderno.
