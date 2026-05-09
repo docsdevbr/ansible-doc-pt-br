@@ -6,66 +6,76 @@
   The original work was translated from English into Brazilian Portuguese.
   https://github.com/docsdevbr/ansible-doc-pt-br/blob/-/LICENSES/GPL-3.0-only.txt
 
+  source_url: https://github.com/ansible/ansible-documentation/blob/devel/docs/docsite/rst/getting_started_ee/run_execution_environment.rst
+  revision: 5569b25c51289bb67a4d60150c1c281612588fa3
+  status: ready
+
 .. _running_custom_execution_environment:
 
-***************
-Running your EE
-***************
+*****************
+Executando seu EE
+*****************
 
-You can run your EE on the command line against ``localhost`` or a remote target using ``ansible-navigator``.
+Você pode executar seu EE (Execution Environment, ou Ambiente de Execução) na
+linha de comando contra o ``localhost`` ou um alvo remoto usando o
+``ansible-navigator``.
 
 .. note::
 
-   There are other tools besides ``ansible-navigator`` you can run EEs with.
+   Existem outras ferramentas além do ``ansible-navigator`` com as quais você
+   pode executar EEs.
 
-Run against localhost
+Executar no localhost
 =====================
 
-#. Create a ``test_localhost.yml`` playbook.
+#. Crie um playbook ``test_localhost.yml``.
 
    .. literalinclude:: yaml/test_localhost.yml
       :language: yaml
 
-#. Run the playbook inside the ``postgresql_ee`` EE.
+#. Execute o playbook dentro do Ambiente de Execução ``postgresql_ee``.
 
    .. code-block:: bash
 
       ansible-navigator run test_localhost.yml --execution-environment-image postgresql_ee --mode stdout --pull-policy missing --container-options='--user=0'
 
-You may notice the facts being gathered are about the container and not the developer machine.
-This is because the ansible playbook was run inside the container.
+Você pode notar que os fatos coletados são referentes ao contêiner e não à
+máquina da pessoa desenvolvedora.
+Isso ocorre porque o playbook do Ansible foi executado dentro do contêiner.
 
-Run against a remote target
-===========================
+Executar em um alvo remoto
+==========================
 
-Before you start, ensure you have the following:
+Antes de começar, certifique-se de ter o seguinte:
 
-  * At least one IP address or resolvable hostname for a remote target.
-  * Valid credentials for the remote host.
-  * A user with `sudo` permissions on the remote host.
+  * Pelo menos um endereço IP ou nome de host resolúvel para um alvo remoto.
+  * Credenciais válidas para o host remoto.
+  * Um usuário com permissões `sudo` no host remoto.
 
-Execute a playbook inside the ``postgresql_ee`` EE against a remote host machine as in the following example:
+Execute um playbook dentro do Ambiente de Execução ``postgresql_ee`` em uma
+máquina host remota, como no exemplo a seguir:
 
-#. Create a directory for inventory files.
+#. Crie um diretório para arquivos de inventário.
 
    .. code-block:: bash
 
       mkdir inventory
 
-#. Create the ``hosts.yml`` inventory file in the ``inventory`` directory.
+#. Crie o arquivo de inventário ``hosts.yml`` no diretório ``inventory``.
 
    .. literalinclude:: yaml/hosts.yml
       :language: yaml
 
-#. Create a ``test_remote.yml`` playbook.
+#. Crie um playbook ``test_remote.yml``.
 
    .. literalinclude:: yaml/test_remote.yml
       :language: yaml
 
-#. Run the playbook inside the ``postgresql_ee`` EE.
+#. Execute o playbook dentro do EE ``postgresql_ee``.
 
-   Replace ``student`` with the appropriate username.
-   Some arguments in the command can be optional depending on your target host authentication method.
+   Substitua ``student`` pelo nome de usuário apropriado.
+   Alguns argumentos no comando podem ser opcionais, dependendo do método de
+   autenticação do host de destino.
 
    .. code-block:: bash
 
@@ -73,11 +83,13 @@ Execute a playbook inside the ``postgresql_ee`` EE against a remote host machine
 
 .. seealso::
 
-   `Execution Environment Definition <https://ansible-builder.readthedocs.io/en/stable/definition/>`_
-      Provides information about the about Execution Environment definition file and available options.
-   `Ansible Builder CLI usage <https://ansible-builder.readthedocs.io/en/stable/usage/>`_
-      Provides details about using Ansible Builder.
-   `Ansible Navigator documentation <https://ansible-navigator.readthedocs.io/>`_
-      Provides details about using Ansible Navigator.
-   `Running a local container registry for EEs <https://forum.ansible.com/t/running-local-container-registry-for-execution-environments/206>`_
-      This guide in the Ansible community forum explains how to set up a local registry for your Execution Environment images.
+   `Definição do Ambiente de Execução <https://ansible-builder.readthedocs.io/en/stable/definition/>`_
+      Fornece informações sobre o arquivo de definição do Ambiente de Execução e
+      as opções disponíveis.
+   `Uso da CLI do Ansible Builder <https://ansible-builder.readthedocs.io/en/stable/usage/>`_
+      Fornece detalhes sobre como usar o Ansible Builder.
+   `Documentação do Ansible Navigator <https://ansible-navigator.readthedocs.io/>`_
+      Fornece detalhes sobre como usar o Ansible Navigator.
+   `Executando um registro de contêineres local para EEs <https://forum.ansible.com/t/running-local-container-registry-for-execution-environments/206>`_
+      Este guia no fórum da comunidade Ansible explica como configurar um
+      registro local para suas imagens de Ambiente de Execução.
